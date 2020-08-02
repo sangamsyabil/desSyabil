@@ -1,0 +1,52 @@
+
+.product-image{
+    width: 100%;
+	height: 400px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    margin-top: 20px;
+    border-radius: 5px;
+
+    -webkit-box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    -moz-box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+}
+
+h2.product-title{
+    margin-top: 20px;
+}
+
+// tags styling
+.des-badge-clearance,
+.des-badge-bestseller,
+.des-badge-new{
+	font-size: $font-size-small;
+}
+
+.des-badge-new{
+    background-color: $bright-color;
+    color: $background-color;
+}
+.des-badge-bestseller{
+    background-color: $primary-color;
+    color: $background-color;
+}
+.des-badge-clearance{
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+
+
+
+
+// variation styling
+.product-variation-image{
+  height: 200px;
+  width: 100%;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

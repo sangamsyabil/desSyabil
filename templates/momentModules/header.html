@@ -1,0 +1,47 @@
+{% load staticfiles %}
+{% load cart_template_tags %}
+<div class="des-header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{% url 'moments:home' %}">DesMoments</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+<!--                    <li>Place for new menu items (if applicable)</li>-->
+                </ul>
+                <div class="form-inline">
+                    {% if request.user.is_authenticated %}
+                            <a href="{% url 'moments:profile' %}" class="des-button-primary">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="des-button-primary">Logout</a>
+                        <a href="{% url 'moments:order-summary' %}">
+                            <img  id="cart-icon" src="{% static 'img/cart.png' %}">
+                        </a>
+                        <p id="cart-total">{{ request.user|cart_item_count }}</p>
+                    {% else %}
+                        <a href="{% url 'account_login' %}" class="des-button-primary">Login</a>
+                        <a href="{% url 'account_signup' %}" class="des-button-primary">Signup</a>
+                    {% endif %}
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+{% if messages %}
+    {% for message in messages %}
+    <div class="container">
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    </div>
+    {% endfor %}
+{% endif %}
+

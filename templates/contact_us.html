@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block main %}
+
+{% include 'momentModules/header.html' %}
+
+<div class="container">
+    <div class="account-panel">
+        <h2 class="account-title">Have you checked out our FAQ?</h2>
+        <p>Before sending feedback, you might want to check out our FAQ page. This may answer questions you have about the site, without having to type us a full email.</p>
+        <a href="{% url 'moments:faq' %}"><button class="des-button-primary">Visit FAQ</button></a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="account-panel">
+        <h2 class="account-title">Get in touch with us</h2>
+        <p>We love Feedback / Suggestions, please drop your thoughts.</p>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type='submit' class='des-button-primary'>Submit</button>
+        </form>
+    </div>
+</div>
+
+{% include 'momentModules/footer.html' %}
+
+{% endblock main %}

@@ -1,0 +1,56 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block main %}
+
+{% include 'momentModules/header.html' %}
+<div class="container">
+    <div class="account-panel">
+        <h2 class="account-title">Handicraft Trade show - Ottawa</h2>
+        <p>Event Organized by: Manakamana Pvt. ltd.</p>
+    </div>
+</div>
+
+<div id="trade_show_gallery" class="container">
+    <img src="https://i.ytimg.com/vi/TZiQK81Rjfw/maxresdefault.jpg" class="trade_show_card img-responsive">
+    <img src="http://www.fwallpaper.net/wallpapers/H/I/hilary-duff-portrait_1920x1200.jpg" class="trade_show_card img-responsive">
+    <img src="http://delbaz.persiangig.com/image/Portraits/Matt-Sayles-portrait-shot-in-Beverly-HillsNov-8-2008-kristen-stewart-2823602-1845-2560.jpg" class="trade_show_card img-responsive">
+    <video class="trade_show_card vid" controls>
+        <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4"></source>
+    </video>
+    <img src="https://picsum.photos/300" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/400" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/600" class="trade_show_card img-responsive">
+    <img src="http://hd.wallpaperswide.com/thumbs/megan_fox_portrait-t2.jpg" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/300/500" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/650" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/550" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/410" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/420" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/430" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/440" class="trade_show_card img-responsive">
+    <img src="https://picsum.photos/540" class="trade_show_card img-responsive">
+</div>
+
+<div class="container">
+    <div class="account-panel">
+        <h2 class="account-title">Handicraft Trade show - Torronto</h2>
+        <p>Event Organized by: Pandhara Pvt. ltd.</p>
+    </div>
+</div>
+
+<div id="tradeShowModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-body"></div>
+    </div>
+
+    </div>
+</div>
+
+{% include 'momentModules/footer.html' %}
+{% block extra_scripts %}
+<script type="text/javascript" src="{% static 'js/trade_shows.js' %}" defer></script>
+{% endblock extra_scripts %}
+{% endblock main %}

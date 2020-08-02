@@ -1,0 +1,47 @@
+#trade_show_gallery{
+  -webkit-column-count:4;
+  -moz-column-count:4;
+  column-count:4;
+
+  -webkit-column-gap:10px;
+  -moz-column-gap:10px;
+  column-gap: 10px;
+}
+@media (max-width:1200px) {
+  #trade_show_gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+@media (max-width:800px){
+  #trade_show_gallery{
+    -webkit-column-count:2;
+    -moz-column-count:2;
+    column-count:2;
+  }
+}
+@media (max-width:600px){
+  #trade_show_gallery{
+    -webkit-column-count:1;
+    -moz-column-count:1;
+    column-count:1;
+  }
+}
+.trade_show_card{
+  width:100%;
+  height:auto;
+  margin: 2% auto;
+  box-shadow: -3px 5px 15px $primary-color;
+  cursor: pointer;
+
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.modal-img,.model-vid{
+  width:100%;
+  height:auto;
+}
+.modal-body{
+  padding:0px;
+}

@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<footer class="des-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="footer-title">Customer Service</p>
+                <a class="des-footer-item" href="{% url 'moments:privacy-policy' %}">Privacy Policy</a>
+                <a class="des-footer-item" href="{% url 'moments:cookie-policy' %}">Cookie Policy</a>
+                <a class="des-footer-item" href="{% url 'moments:delivery-policy' %}">Delivery Policy</a>
+                <a class="des-footer-item" href="{% url 'moments:return-policy' %}">Return Policy</a>
+                <a class="des-footer-item" href="{% url 'moments:terms' %}">Terms of use</a>
+            </div>
+            <div class="col-md-6">
+                <p class="footer-title">Get Connected</p>
+                <a href="#" id="footer-facebook"></a>
+                <a href="#" id="footer-twitter"></a>
+                <a href="#" id="footer-instagram"></a>
+                <a class="des-footer-item" href="{% url 'moments:faq' %}">FAQ</a>
+                <a class="des-footer-item" href="{% url 'moments:contact-us' %}">Contact Us</a>
+                <a class="des-footer-item" href="{% url 'moments:trade-shows' %}">Explore our Trade-Shows</a>
+                <p class="p_with_small_font">© 2020 DesMoments - All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>

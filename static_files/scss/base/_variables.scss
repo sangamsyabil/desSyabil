@@ -1,0 +1,36 @@
+
+// assigning variables
+
+// font-weight
+$bold-font: 600;
+$normal-font: 400;
+$hover-amount: 50%;
+
+
+// colors
+$primary-color: #374794;
+$secondary-color: #D4EDDA;
+$bright-color: #9d2832;
+$background-color: #ffffff;
+$link-color: #ffffff;
+$link-active-color: #000000;
+$background-color-light: #eeeeee;
+
+// font sizes
+$font-size-heading: 24px;
+$font-size-title: 20px;
+$font-size-capitals: 18px;
+$font-size-medium: 16px;
+$font-size-small: 12px;
+$font-size-icons: 20px;
+
+@media only screen and (max-width: 600px) {
+  $font-size-heading: 20px;
+  $font-size-title: 18px;
+  $font-size-capitals: 16px;
+  $font-size-medium: 12px;
+  $font-size-small: 10px;
+  $font-size-icons: 16px;
+}
+
+

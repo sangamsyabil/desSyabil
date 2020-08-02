@@ -1,0 +1,17 @@
+{% extends "base/base.html" %}
+
+{% load i18n %}
+{% block head_title %}{% trans "Account Inactive" %}{% endblock %}
+
+{% block main %}
+{% include 'momentModules/header.html' %}
+<div class="container">
+    <div class="row">
+        <div class='col-6 offset-3 account-panel'>
+        <h1 class="account-title">{% trans "Account Inactive" %}</h1>
+        <p>{% trans "This account is inactive." %}</p>
+        </div>
+    </div>
+</div>
+{% include 'momentModules/footer.html' %}
+{% endblock %}

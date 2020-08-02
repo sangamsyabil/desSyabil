@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% block main %}
+
+{% include 'momentModules/header.html' %}
+
+{% include 'momentModules/index_sliders.html' %}
+
+
+<div class="container">
+    <div class="home-featured">
+        <h2>Featured Products</h2>
+        {% include 'momentModules/list-items.html' %}
+    </div>
+</div>
+
+
+{% include 'momentModules/footer.html' %}
+{% block extra_scripts %}
+<script type="text/javascript" src="{% static 'js/index_slick_slider.js' %}" defer></script>
+{% endblock extra_scripts %}
+
+{% endblock main %}

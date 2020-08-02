@@ -1,0 +1,64 @@
+{% extends 'base/base.html' %}
+{% block main %}
+
+{% include 'momentModules/header.html' %}
+
+<div class="container">
+    <div class="account-panel">
+        <h2 class="account-title">Have you checked out our FAQ?</h2>
+        <p>Before requesting a refund, you might want to check out our FAQ page. This may answer questions you have about the site.</p>
+        <a href="{% url 'moments:faq' %}"><button class="des-button-primary">Visit FAQ</button></a>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="card static-page-panel">
+        <div class="card-header">Return Policy</div>
+        <div class="card-body">
+            <h5 class="card-title">Option 1 – No Refunds/Exchanges:</h5>
+            <p class="card-text">
+                We do not accept returns or exchanges unless the item you purchased is defective. If you receive a defective item, please contact us at <a class="link_inside_p" href="{% url 'moments:contact-us' %}">Contact us</a> with details of the
+                product and the defect. You can send the item you consider defective to:
+                <div class="company_address"></div>
+                Upon receipt of the returned product, we will fully examine it and notify you via e-mail, within a reasonable period of time, whether you are entitled to a
+                refund or a replacement as a result of the defect. If you are entitled to a replacement or refund, we will replace the product or refund the purchase price,
+                using the original method of payment.
+            </p>
+
+            <h5 class="card-title">Option 2 – Refunds Permitted:</h5>
+            <p class="card-text">
+                We accept returns. You can return unopened items in the original packaging within 30 days of your purchase with receipt or proof of purchase.
+                If 30 days or more have passed since your purchase, we cannot offer you a refund or an exchange.
+
+                Upon receipt of the returned item, we will fully examine it and notify you via email, within a reasonable period of time, whether you are entitled to a return.
+                If you are entitled to a return, we will refund your purchase price and a credit will automatically be applied to your original method of payment.
+                Only regular priced items may be refunded. Sale items are non-refundable.
+                To follow-up on the status of your return, please contact us at <a class="link_inside_p" href="{% url 'moments:contact-us' %}">Contact us</a>.
+            </p>
+
+            <h5 class="card-title">Shipping</h5>
+            <p class="card-text">
+                To return the item you purchased, please mail it to:
+                <div class="company_address"></div>
+                Refunds do not include any shipping and handling charges shown on the packaging slip or invoice. Shipping charges for all returns must be prepaid and insured by you.
+                You are responsible for any loss or damage to hardware during shipment. We do not guarantee that we will receive your returned item. Shipping and handling charges are
+                not refundable. Any amounts refunded will not include the cost of shipping.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="account-panel">
+        <h2 class="account-title">Once the damaged item is shipped - fill out this refund request form.</h2>
+        <p>Before requesting a refund, ... You can include a tracking id and information while filling this form</p>
+        <a href="{% url 'moments:request-refund' %}" class="des-button-primary">Request Refund</a>
+    </div>
+</div>
+
+
+
+{% include 'momentModules/footer.html' %}
+
+{% endblock main %}
