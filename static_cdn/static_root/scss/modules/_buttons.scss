@@ -1,0 +1,31 @@
+.des-button-primary{
+  border: 1px solid $primary-color;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.des-button-primary:hover{
+  background-color: $primary-color;
+  color: $background-color;
+}
+
+.des-button-secondary{
+  border: 1px solid $secondary-color;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.des-button-secondary:hover{
+  background-color: $secondary-color;
+  color: $background-color;
+}
+
+.add-to-cart{
+  border: 1px solid $primary-color;
+  padding: 8px 15px;
+  border-radius: 5px;
+  width: 50%;
+}
+.add-to-cart:hover{
+  background-color: $primary-color;
+  color: $background-color;
+}

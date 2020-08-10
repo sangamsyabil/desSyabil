@@ -1,0 +1,1028 @@
+/* line 2, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+body {
+  color: #374794;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* line 6, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+a {
+  color: #374794;
+}
+
+/* line 9, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* line 16, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+.p_with_small_font {
+  font-size: 12px;
+}
+
+/* line 23, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+#test-heading {
+  font-size: 24px;
+}
+
+/* line 26, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+#test-title {
+  font-size: 20px;
+}
+
+/* line 29, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+#test-capitals {
+  font-size: 18px;
+}
+
+/* line 32, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+#test-medium-font {
+  font-size: 16px;
+}
+
+/* line 35, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+#test-small-font {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 40, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+  #test-heading {
+    font-size: 20px;
+  }
+  /* line 43, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+  #test-title {
+    font-size: 18px;
+  }
+  /* line 46, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+  #test-capitals {
+    font-size: 16px;
+  }
+  /* line 49, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+  #test-medium-font {
+    font-size: 12px;
+  }
+  /* line 52, ../../../../../PycharmProjects/desmoments/static/scss/base/_parameters.scss */
+  #test-small-font {
+    font-size: 10px;
+  }
+}
+
+/* line 1, ../../../../../PycharmProjects/desmoments/static/scss/layout/_header.scss */
+.des-header {
+  border-bottom: 2px solid #374794;
+}
+
+/* line 5, ../../../../../PycharmProjects/desmoments/static/scss/layout/_header.scss */
+#cart-icon {
+  width: 25px;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+/* line 11, ../../../../../PycharmProjects/desmoments/static/scss/layout/_header.scss */
+#cart-total {
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  background-color: #9d2832;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+/* line 22, ../../../../../PycharmProjects/desmoments/static/scss/layout/_header.scss */
+.navbar-brand {
+  font-size: 24px !important;
+}
+
+/* line 27, ../../../../../PycharmProjects/desmoments/static/scss/layout/_header.scss */
+.alert {
+  margin-top: 1rem;
+}
+
+/* line 1, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer {
+  margin: 20px 0px;
+  padding: 20px 0px;
+  border-top: 1px solid #374794;
+  border-bottom: 1px solid #374794;
+}
+
+/* line 7, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer p.footer-title {
+  font-size: 20px;
+}
+
+/* line 11, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a.des-footer-item {
+  border-left: 4px solid #9d2832;
+  display: block;
+  font-size: 16px;
+  height: 25px;
+  line-height: 25px;
+  width: 50%;
+  padding-left: 10px;
+  margin: 10px 0px;
+  text-decoration: none;
+  border-radius: 0px 5px 5px 0px;
+  -webkit-box-shadow: #cccccc 0 0 16px;
+  -moz-box-shadow: #cccccc 0 0 16px;
+  box-shadow: #cccccc 0 0 16px;
+}
+
+/* line 27, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a.des-footer-item:hover {
+  background-color: #374794;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 32, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+  .des-footer a.des-footer-item {
+    width: 100%;
+    margin: 10px 0px;
+  }
+  /* line 36, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+  .des-footer a.des-footer-item:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 42, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a#footer-facebook,
+.des-footer a#footer-twitter,
+.des-footer a#footer-instagram {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 55, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a#footer-facebook {
+  background-image: url("/static/img/facebook.png");
+}
+
+/* line 58, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a#footer-facebook:hover {
+  background-image: url("/static/img/facebook_hover.png");
+}
+
+/* line 61, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a#footer-twitter {
+  background-image: url("/static/img/twitter.png");
+}
+
+/* line 64, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a#footer-twitter:hover {
+  background-image: url("/static/img/twitter_hover.png");
+}
+
+/* line 67, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a#footer-instagram {
+  background-image: url("/static/img/instagram.png");
+}
+
+/* line 70, ../../../../../PycharmProjects/desmoments/static/scss/layout/_footer.scss */
+.des-footer a#footer-instagram:hover {
+  background-image: url("/static/img/instagram_hover.png");
+}
+
+/* line 2, ../../../../../PycharmProjects/desmoments/static/scss/layout/_account.scss */
+.account-panel {
+  -webkit-box-shadow: #cccccc 0 0 16px;
+  -moz-box-shadow: #cccccc 0 0 16px;
+  box-shadow: #cccccc 0 0 16px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+/* line 12, ../../../../../PycharmProjects/desmoments/static/scss/layout/_account.scss */
+.account-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* line 17, ../../../../../PycharmProjects/desmoments/static/scss/layout/_account.scss */
+.account-button-primary {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  height: 45px;
+  line-height: 40px;
+}
+
+/* line 28, ../../../../../PycharmProjects/desmoments/static/scss/layout/_account.scss */
+.account-button-primary {
+  border: 1px solid #374794;
+}
+
+/* line 32, ../../../../../PycharmProjects/desmoments/static/scss/layout/_account.scss */
+.account-button-primary:hover {
+  border: 1px solid #374794;
+  background-color: #374794;
+  color: #ffffff;
+}
+
+/* line 38, ../../../../../PycharmProjects/desmoments/static/scss/layout/_account.scss */
+.account-links {
+  text-decoration: none;
+  height: 45px;
+  line-height: 40px;
+}
+
+/* line 2, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.product-outer-panel {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+
+/* line 9, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.product-panel {
+  display: inline-block;
+  min-width: 250px;
+  -webkit-box-shadow: #cccccc 0 0 16px;
+  -moz-box-shadow: #cccccc 0 0 16px;
+  box-shadow: #cccccc 0 0 16px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 10px;
+}
+
+/* line 23, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 34, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.store-item-price {
+  float: right;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  width: 50%;
+  margin-top: 5px;
+  text-align: right;
+  color: #374794;
+}
+
+/* line 44, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.store-item-price-discount {
+  padding-right: 10px;
+  text-decoration: line-through;
+  color: #9d2832;
+  font-size: 12px;
+}
+
+/* line 52, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.des-badge-clearance,
+.des-badge-bestseller,
+.des-badge-new {
+  font-size: 12px;
+}
+
+/* line 58, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.des-badge-new {
+  background-color: #9d2832;
+  color: #ffffff;
+}
+
+/* line 62, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.des-badge-bestseller {
+  background-color: #374794;
+  color: #ffffff;
+}
+
+/* line 66, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.des-badge-clearance {
+  background-color: #D4EDDA;
+  color: #374794;
+}
+
+/* line 74, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.des-pagination {
+  margin-top: 30px;
+}
+
+/* line 78, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.pagination > li > a {
+  background-color: #ffffff !important;
+  color: #374794 !important;
+  margin-right: 10px;
+  border: 1px solid #374794;
+  border-radius: 5px;
+}
+
+/* line 86, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  color: #ffffff;
+  background-color: #D4EDDA !important;
+}
+
+/* line 94, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.pagination > .active > a {
+  color: #ffffff !important;
+  background-color: #374794 !important;
+}
+
+/* line 99, ../../../../../PycharmProjects/desmoments/static/scss/layout/_list-items.scss */
+.pagination > .active > a:hover {
+  background-color: #D4EDDA !important;
+}
+
+/* line 1, ../../../../../PycharmProjects/desmoments/static/scss/modules/_buttons.scss */
+.des-button-primary {
+  border: 1px solid #374794;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+/* line 7, ../../../../../PycharmProjects/desmoments/static/scss/modules/_buttons.scss */
+.des-button-primary:hover {
+  background-color: #374794;
+  color: #ffffff;
+}
+
+/* line 12, ../../../../../PycharmProjects/desmoments/static/scss/modules/_buttons.scss */
+.des-button-secondary {
+  border: 1px solid #D4EDDA;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* line 17, ../../../../../PycharmProjects/desmoments/static/scss/modules/_buttons.scss */
+.des-button-secondary:hover {
+  background-color: #D4EDDA;
+  color: #ffffff;
+}
+
+/* line 22, ../../../../../PycharmProjects/desmoments/static/scss/modules/_buttons.scss */
+.add-to-cart {
+  border: 1px solid #374794;
+  padding: 8px 15px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+/* line 28, ../../../../../PycharmProjects/desmoments/static/scss/modules/_buttons.scss */
+.add-to-cart:hover {
+  background-color: #374794;
+  color: #ffffff;
+}
+
+/* line 1, ../../../../../PycharmProjects/desmoments/static/scss/modules/_forms.scss */
+.form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* line 1, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.home-showcase-base {
+  width: 100%;
+  height: 500px;
+  display: block;
+  background-image: url("/static/img/home_showcase_base.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-box-shadow: #cccccc 0 0 16px;
+  -moz-box-shadow: #cccccc 0 0 16px;
+  box-shadow: #cccccc 0 0 16px;
+  opacity: 50%;
+  position: relative;
+}
+
+/* line 20, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.categories {
+  display: block;
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 29, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+  .categories {
+    bottom: 100px;
+  }
+}
+
+/* line 35, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.categories .category-first,
+.categories .category-second,
+.categories .category-third,
+.categories .category-forth {
+  min-width: 20%;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 1%;
+  background-color: #374794;
+  color: #ffffff;
+  line-height: 200px;
+  -webkit-box-shadow: #cccccc 0 0 16px;
+  -moz-box-shadow: #cccccc 0 0 16px;
+  box-shadow: #cccccc 0 0 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  /* line 55, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+  .categories .category-first,
+  .categories .category-second,
+  .categories .category-third,
+  .categories .category-forth {
+    height: 50px;
+    margin: 10px;
+    line-height: 50px;
+  }
+}
+
+/* line 68, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.home-featured {
+  margin-top: 30px;
+}
+
+/* line 71, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.home-featured h2 {
+  border-bottom: 1px solid #374794;
+  font-size: 20px;
+}
+
+/* ==== Main CSS === */
+/* line 89, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+/* line 98, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill .img-div-one,
+.Modern-Slider .item .img-fill .img-div-two,
+.Modern-Slider .item .img-fill .img-div-three,
+.Modern-Slider .item .img-fill .img-div-four,
+.Modern-Slider .item .img-fill .img-div-five {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* line 112, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill .img-div-one {
+  background-image: url("/static/img/home_showcase_base.JPG");
+}
+
+/* line 115, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill .img-div-two {
+  background-image: url("/static/img/pic1.png");
+}
+
+/* line 118, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill .img-div-three {
+  background-image: url("/static/img/pic2.jpg");
+}
+
+/* line 121, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill .img-div-four {
+  background-image: url("/static/img/pic3.jpg");
+}
+
+/* line 124, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill .img-div-five {
+  background-image: url("/static/img/home_showcase_base.JPG");
+}
+
+/* line 129, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+/* line 139, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Grid1k {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* line 145, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.blocks-box,
+.slick-slider {
+  margin: 0;
+  padding: 0 !important;
+}
+
+/* line 151, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-slide {
+  float: left;
+  padding: 0;
+}
+
+/* ==== Slider Style === */
+/* line 157, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill {
+  height: 80vh;
+  background: #374794;
+}
+
+/* line 162, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill .info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 80vh;
+  text-align: center;
+}
+
+/* line 173, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .img-fill .img-div {
+  filter: blur(2px);
+}
+
+/* line 177, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item .info > div {
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+/* line 182, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .NextArrow,
+.Modern-Slider .PrevArrow {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  width: 45px;
+  height: 90px;
+  background-color: #374794;
+  border: 1px solid #374794;
+  border-radius: 5px;
+  margin-top: -22.5px;
+  text-align: center;
+  font-size: 24px;
+  font-family: FontAwesome, sans-serif;
+  color: #ffffff;
+  z-index: 5;
+}
+
+/* line 199, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .NextArrow {
+  right: 0px;
+}
+
+/* line 203, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .NextArrow:before {
+  content: '\f105';
+}
+
+/* line 205, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .PrevArrow {
+  left: 0px;
+}
+
+/* line 209, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .PrevArrow:before {
+  content: '\f104';
+}
+
+/* line 211, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .slick-dots {
+  position: absolute;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+/* line 222, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .slick-dots li button {
+  display: none;
+}
+
+/* line 223, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .slick-dots li {
+  float: left;
+  width: 0px;
+  height: 5px;
+  background-color: #9d2832;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+/* line 233, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .slick-dots li.slick-active {
+  width: 100%;
+  animation: ProgressDots 11s both;
+}
+
+/* line 238, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item h3 {
+  font-size: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  animation: fadeOutRight 1s both;
+  margin: 0;
+  padding: 20px;
+}
+
+/* line 247, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: #ffffff;
+  max-width: 600px;
+  overflow: hidden;
+  height: 60px;
+  animation: fadeOutLeft 1s both;
+}
+
+/* line 258, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item.slick-active h3 {
+  animation: fadeInDown 1s both 1s;
+}
+
+/* line 262, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item.slick-active h5 {
+  animation: fadeInLeft 1s both 1.5s;
+}
+
+/* line 266, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider .item.slick-active {
+  animation: Slick-FastSwipeIn 1s both;
+}
+
+/* line 270, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.Modern-Slider {
+  background-color: #374794;
+}
+
+/* ==== Slider Image Transition === */
+@keyframes Slick-FastSwipeIn {
+  0% {
+    transform: rotate3d(0, 1, 0, 150deg) scale(0) perspective(400px);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg) scale(1) perspective(400px);
+  }
+}
+
+@-webkit-keyframes ProgressDots {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes ProgressDots {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ==== Slick Slider Css Ruls === */
+/* line 282, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 283, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 284, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-list:focus {
+  outline: none;
+}
+
+/* line 284, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-list.dragging {
+  cursor: hand;
+}
+
+/* line 285, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-slider .slick-track, .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 286, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+/* line 287, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-track:before, .slick-track:after {
+  display: table;
+  content: '';
+}
+
+/* line 287, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-track:after {
+  clear: both;
+}
+
+/* line 288, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 289, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+/* line 290, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+/* line 291, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* line 292, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+/* line 293, ../../../../../PycharmProjects/desmoments/static/scss/pages/_index.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 2, ../../../../../PycharmProjects/desmoments/static/scss/pages/_product_details.scss */
+.product-image {
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: #cccccc 0 0 16px;
+  -moz-box-shadow: #cccccc 0 0 16px;
+  box-shadow: #cccccc 0 0 16px;
+}
+
+/* line 16, ../../../../../PycharmProjects/desmoments/static/scss/pages/_product_details.scss */
+h2.product-title {
+  margin-top: 20px;
+}
+
+/* line 21, ../../../../../PycharmProjects/desmoments/static/scss/pages/_product_details.scss */
+.des-badge-clearance,
+.des-badge-bestseller,
+.des-badge-new {
+  font-size: 12px;
+}
+
+/* line 27, ../../../../../PycharmProjects/desmoments/static/scss/pages/_product_details.scss */
+.des-badge-new {
+  background-color: #9d2832;
+  color: #ffffff;
+}
+
+/* line 31, ../../../../../PycharmProjects/desmoments/static/scss/pages/_product_details.scss */
+.des-badge-bestseller {
+  background-color: #374794;
+  color: #ffffff;
+}
+
+/* line 35, ../../../../../PycharmProjects/desmoments/static/scss/pages/_product_details.scss */
+.des-badge-clearance {
+  background-color: #D4EDDA;
+  color: #374794;
+}
+
+/* line 45, ../../../../../PycharmProjects/desmoments/static/scss/pages/_product_details.scss */
+.product-variation-image {
+  height: 200px;
+  width: 100%;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* line 1, ../../../../../PycharmProjects/desmoments/static/scss/pages/_static_pages.scss */
+.static-page-panel {
+  margin-top: 20px;
+}
+
+/* line 4, ../../../../../PycharmProjects/desmoments/static/scss/pages/_static_pages.scss */
+.static-page-panel .card-header {
+  font-size: 24px;
+}
+
+/* line 9, ../../../../../PycharmProjects/desmoments/static/scss/pages/_static_pages.scss */
+.faq-title {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 400;
+  border-left: 3px solid #9d2832;
+  border-right: 3px solid #9d2832;
+  border-radius: 10px;
+  padding-left: 10px;
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+
+/* line 22, ../../../../../PycharmProjects/desmoments/static/scss/pages/_static_pages.scss */
+.faq-body {
+  margin-left: 10px;
+  border-left: 2px solid #D4EDDA;
+  padding-left: 10px;
+}
+
+/* line 28, ../../../../../PycharmProjects/desmoments/static/scss/pages/_static_pages.scss */
+.link_inside_p {
+  background-color: #374794;
+  color: #ffffff;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+
+/* line 34, ../../../../../PycharmProjects/desmoments/static/scss/pages/_static_pages.scss */
+.link_inside_p:hover {
+  color: #ffffff;
+}
+
+/* line 39, ../../../../../PycharmProjects/desmoments/static/scss/pages/_static_pages.scss */
+.no-items-to-show {
+  width: 100%;
+  height: 60px;
+  font-size: 20px;
+  background-color: #eeeeee;
+  border: 0;
+  border-radius: 5px 0 5px 0;
+  line-height: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* line 64, ../../../../../PycharmProjects/desmoments/static/scss/pages/_static_pages.scss */
+.company_address {
+  height: 70px;
+  width: 140px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/static/img/address.png");
+  margin-top: -15px;
+}
+
+/* line 1, ../../../../../PycharmProjects/desmoments/static/scss/pages/_trade_shows.scss */
+#trade_show_gallery {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  /* line 11, ../../../../../PycharmProjects/desmoments/static/scss/pages/_trade_shows.scss */
+  #trade_show_gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  /* line 18, ../../../../../PycharmProjects/desmoments/static/scss/pages/_trade_shows.scss */
+  #trade_show_gallery {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 25, ../../../../../PycharmProjects/desmoments/static/scss/pages/_trade_shows.scss */
+  #trade_show_gallery {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
+
+/* line 31, ../../../../../PycharmProjects/desmoments/static/scss/pages/_trade_shows.scss */
+.trade_show_card {
+  width: 100%;
+  height: auto;
+  margin: 2% auto;
+  box-shadow: -3px 5px 15px #374794;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* line 41, ../../../../../PycharmProjects/desmoments/static/scss/pages/_trade_shows.scss */
+.modal-img, .model-vid {
+  width: 100%;
+  height: auto;
+}
+
+/* line 45, ../../../../../PycharmProjects/desmoments/static/scss/pages/_trade_shows.scss */
+.modal-body {
+  padding: 0px;
+}
+
+/* line 1, ../../../../../PycharmProjects/desmoments/static/scss/pages/_error_pages.scss */
+.hit-the-error-floor {
+  color: #fff;
+  font-size: 12em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* line 21, ../../../../../PycharmProjects/desmoments/static/scss/pages/_error_pages.scss */
+.error-page-box {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/*# sourceMappingURL=main.css.map */

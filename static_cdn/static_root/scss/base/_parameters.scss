@@ -1,0 +1,55 @@
+
+body{
+  color: $primary-color; font-size: $font-size-medium;
+  font-weight: $normal-font; font-family: 'Alegreya Sans', sans-serif;
+}
+a{
+  color: $primary-color;
+}
+a:hover{
+  //color: $secondary-color;
+  cursor:pointer;
+  text-decoration: none;
+}
+
+
+.p_with_small_font{
+  font-size: $font-size-small;
+}
+
+
+
+
+#test-heading{
+  font-size: 24px;
+}
+#test-title{
+  font-size: 20px;
+}
+#test-capitals{
+  font-size: 18px;
+}
+#test-medium-font{
+  font-size: 16px;
+}
+#test-small-font{
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  #test-heading{
+    font-size: 20px;
+  }
+  #test-title{
+    font-size: 18px;
+  }
+  #test-capitals{
+    font-size: 16px;
+  }
+  #test-medium-font{
+    font-size: 12px;
+  }
+  #test-small-font{
+    font-size: 10px;
+  }
+}

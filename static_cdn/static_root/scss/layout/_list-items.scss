@@ -1,0 +1,111 @@
+
+.product-outer-panel{
+	width: 100%;
+	text-align: center;
+	padding: 0;
+}
+
+
+.product-panel{
+	display: inline-block;
+	min-width: 250px;
+
+	-webkit-box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    -moz-box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+
+	background-color: $background-color;
+	border-radius: 4px;
+	padding: 5px;
+	margin: 10px;
+}
+
+.thumbnail{
+	width: 100%;
+	height: 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+.store-item-price{
+	float: right;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 50%;
+	margin-top: 5px;
+	text-align: right;
+	color: $primary-color;
+}
+.store-item-price-discount{
+    padding-right: 10px;
+    text-decoration: line-through;
+    color: $bright-color;
+    font-size: $font-size-small;
+}
+
+// tags styling
+.des-badge-clearance,
+.des-badge-bestseller,
+.des-badge-new{
+	font-size: $font-size-small;
+}
+
+.des-badge-new{
+    background-color: $bright-color;
+    color: $background-color;
+}
+.des-badge-bestseller{
+    background-color: $primary-color;
+    color: $background-color;
+}
+.des-badge-clearance{
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+
+
+// pagination
+.des-pagination{
+	margin-top: 30px;
+}
+
+.pagination > li > a {
+    background-color: $background-color !important;;
+    color: $primary-color !important;
+	margin-right: 10px;
+	border: 1px solid $primary-color;
+	border-radius: 5px;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    color: $background-color;
+    background-color: $secondary-color !important;
+}
+
+.pagination > .active > a {
+    color: $background-color !important;
+    background-color: $primary-color !important;
+}
+
+.pagination > .active > a:hover {
+    background-color: $secondary-color !important;
+}
+
+
+
+
+
+
+
+
+
+

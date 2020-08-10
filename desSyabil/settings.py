@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Our apps
+    # our custom apps
     'accounts',
     'addresses',
     'analytics',
@@ -56,6 +56,15 @@ INSTALLED_APPS = [
     'search',
     'tags',
 ]
+
+AUTH_USER_MODEL = 'accounts.User'  # changes the built-in user model to ours
+LOGIN_URL = '/login/'
+LOGIN_URL_REDIRECT = '/'
+LOGOUT_URL = '/logout/'
+
+FORCE_SESSION_TO_ONE = False
+FORCE_INACTIVE_USER_ENDSESSION= False
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -136,3 +145,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static_files"),
 ]
+
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
+PROTECTED_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'protected_media_root')
+VENV_PATH = os.path.join(BASE_DIR)

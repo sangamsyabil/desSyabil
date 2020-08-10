@@ -1,0 +1,43 @@
+
+.account-panel {
+    -webkit-box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    -moz-box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+
+    padding: 30px;
+    margin-top: 30px;
+}
+
+
+.account-title{
+  font-size: $font-size-title;
+  font-weight: $bold-font;
+}
+
+.account-button-primary{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  //float: right;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  height: 45px;
+  line-height: 40px;
+}
+.account-button-primary{
+  border: 1px solid $primary-color;
+}
+
+.account-button-primary:hover{
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+  color: $background-color;
+}
+
+.account-links{
+  text-decoration: none;
+  height: 45px;
+  line-height: 40px;
+}
+

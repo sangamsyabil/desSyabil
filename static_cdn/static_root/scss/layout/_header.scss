@@ -1,0 +1,29 @@
+.des-header{
+	border-bottom: 2px solid $primary-color;
+}
+
+#cart-icon{
+	width:25px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+#cart-total{
+	display: block;
+	text-align: center;
+	color: $background-color;
+	background-color: $bright-color;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 50%;
+	font-size: $font-size-medium;
+}
+.navbar-brand{
+	font-size: $font-size-heading !important;
+}
+
+
+.alert{
+	margin-top: 1rem;
+}
