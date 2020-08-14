@@ -91,22 +91,39 @@ def unique_order_id_generator(instance):
     return order_new_id
 
 
+# def unique_slug_generator(instance, new_slug=None):
+#     """
+#     This is for a Django project and it assumes your instance
+#     has a model with a slug field and a title character (char) field.
+#     """
+#     if new_slug is not None:
+#         slug = new_slug
+#     else:
+#         slug = slugify(instance.title)
+#
+#     Klass = instance.__class__
+#     qs_exists = Klass.objects.filter(slug=slug).exists()
+#     if qs_exists:
+#         new_slug = "{slug}-{randstr}".format(
+#             slug=slug,
+#             randstr=random_string_generator(size=4)
+#         )
+#         return unique_slug_generator(instance, new_slug=new_slug)
+#     return slug
+
+# slug generator
+def random_code_for_slug():
+    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
+
+
 def unique_slug_generator(instance, new_slug=None):
-    """
-    This is for a Django project and it assumes your instance
-    has a model with a slug field and a title character (char) field.
-    """
+    slug = slugify(instance.title)
     if new_slug is not None:
         slug = new_slug
-    else:
-        slug = slugify(instance.title)
 
     Klass = instance.__class__
-    qs_exists = Klass.objects.filter(slug=slug).exists()
-    if qs_exists:
-        new_slug = "{slug}-{randstr}".format(
-            slug=slug,
-            randstr=random_string_generator(size=4)
-        )
+    qs = Klass.objects.filter(slug=slug)
+    if qs.exists():
+        new_slug = "%s-%s" % (slug, random_code_for_slug())
         return unique_slug_generator(instance, new_slug=new_slug)
     return slug
