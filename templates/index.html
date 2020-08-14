@@ -1,5 +1,5 @@
 {% extends 'base/base.html' %}
-{% load staticfiles %}
+{% load static %}
 {% block main %}
 
 {% include 'momentModules/header.html' %}
@@ -15,7 +15,7 @@
 </div>
 
 
-{#{% include 'momentModules/footer.html' %}#}
+{% include 'momentModules/footer.html' %}
 {% block extra_scripts %}
 <script type="text/javascript" src="{% static 'js/index_slick_slider.js' %}" defer></script>
 {% endblock extra_scripts %}
