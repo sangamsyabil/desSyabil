@@ -24,6 +24,8 @@ urlpatterns = [
     path('', include('moments.urls', namespace='moments')),  # main class as "home"
     path('account/', include("accounts.urls", namespace='account')),
     path('product/', include("products.urls", namespace='product')),
+    path('search/', include("search.urls", namespace='search')),
+    path('cart/', include("carts.urls", namespace='cart')),
 ]
 
 if settings.DEBUG:

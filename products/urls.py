@@ -11,5 +11,4 @@ app_name = 'product'
 urlpatterns = [
     path('list/', ProductListView.as_view(), name='lists'),
     path('<slug>', ProductDetailView.as_view(), name='details'),
-
 ]
