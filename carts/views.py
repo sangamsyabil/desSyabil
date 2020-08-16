@@ -134,3 +134,7 @@ def checkout_home(request):
 
 def checkout_done_view(request):
     return render(request, "carts/checkout-done.html", {})
+
+
+
+
