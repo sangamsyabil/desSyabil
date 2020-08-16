@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 
 
 {% block content %}
@@ -16,7 +17,7 @@
     {% for product in cart.products.all %}
     <tr class='cart-product'>
       <th scope="row">{{ forloop.counter }}</th>
-      <td><a href='{{ product.get_absolute_url }}'>{{ product.title }}</a>
+      <td><a href='{{ product.get_absolute_url }}'>{{ product.title }}</a> 
         {% include 'carts/snippets/remove-product.html' with product_id=product.id %}
       </td>
       <td>{{ product.price }}</td>

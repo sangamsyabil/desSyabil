@@ -1,18 +1,16 @@
-import os
 import random
+import os
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
 
 from django.db import models
 from django.db.models import Q
-from django.db.models.signals import pre_save
+from django.db.models.signals import pre_save, post_save
 from django.urls import reverse
 
-from desSyabil.utils import unique_slug_generator
-
-LABEL_CHOICES = (
-    ('N', 'new'),
-    ('B', 'bestseller'),
-    ('C', 'clearance'),
-)
+# from desSyabil.aws.download.utils import AWSDownload
+# from desSyabil.aws.utils import ProtectedS3Storage
+from desSyabil.utils import unique_slug_generator, get_filename
 
 
 def get_filename_ext(filepath):
@@ -22,6 +20,8 @@ def get_filename_ext(filepath):
 
 
 def upload_image_path(instance, filename):
+    # print(instance)
+    # print(filename)
     new_filename = random.randint(1, 3910209312)
     name, ext = get_filename_ext(filename)
     final_filename = '{new_filename}{ext}'.format(new_filename=new_filename, ext=ext)
@@ -63,65 +63,41 @@ class ProductManager(models.Manager):
         if qs.count() == 1:
             return qs.first()
         return None
-    #
-    # def search(self, query):
-    #     return self.get_queryset().active().search(query)
 
-
-class Category(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-
-    class Meta:
-        verbose_name_plural = "Categories"
-
-    def __str__(self):
-        return self.name
-
-    def get_absolute_url(self):
-        return reverse("products:category", kwargs={"name": self.name})
+    def search(self, query):
+        return self.get_queryset().active().search(query)
 
 
 class Product(models.Model):
     title = models.CharField(max_length=120)
     slug = models.SlugField(blank=True, unique=True)
-
-    category = models.ManyToManyField(Category, blank=False)
-    label = models.CharField(choices=LABEL_CHOICES, max_length=1, blank=True)
-
-    price = models.DecimalField(decimal_places=2, max_digits=5)
-    discounted_price = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2)
-
-    description = models.TextField(default="Empty description")
-    quantity = models.IntegerField(default=10)
-
+    description = models.TextField()
+    price = models.DecimalField(decimal_places=2, max_digits=20, default=39.99)
     image = models.ImageField(upload_to=upload_image_path, null=True, blank=True)
-
     featured = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
     timestamp = models.DateTimeField(auto_now_add=True)
-    # is_digital = models.BooleanField(default=False)  # User Library
+    is_digital = models.BooleanField(default=False)  # User Library
 
     objects = ProductManager()
 
     def get_absolute_url(self):
-        return reverse("product:details", kwargs={
-            'slug': self.slug
-        })
+        # return "/products/{slug}/".format(slug=self.slug)
+        return reverse("products:detail", kwargs={"slug": self.slug})
 
     def __str__(self):
+        return self.title
+
+    def __unicode__(self):
         return self.title
 
     @property
     def name(self):
         return self.title
 
-    @property
-    def is_available(self):
-        return self.quantity > 0
-
-    # def get_downloads(self):
-    #     qs = self.productfile_set.all()
-    #     return qs
+    def get_downloads(self):
+        qs = self.productfile_set.all()
+        return qs
 
 
 def product_pre_save_receiver(sender, instance, *args, **kwargs):
@@ -131,21 +107,22 @@ def product_pre_save_receiver(sender, instance, *args, **kwargs):
 
 pre_save.connect(product_pre_save_receiver, sender=Product)
 
-# def upload_product_file_loc(instance, filename):
-#     slug = instance.product.slug
-#     # id_ = 0
-#     id_ = instance.id
-#     if id_ is None:
-#         Klass = instance.__class__
-#         qs = Klass.objects.all().order_by('-pk')
-#         if qs.exists():
-#             id_ = qs.first().id + 1
-#         else:
-#             id_ = 0
-#     if not slug:
-#         slug = unique_slug_generator(instance.product)
-#     location = "product/{slug}/{id}/".format(slug=slug, id=id_)
-#     return location + filename  # "path/to/filename.mp4"
+
+def upload_product_file_loc(instance, filename):
+    slug = instance.product.slug
+    # id_ = 0
+    id_ = instance.id
+    if id_ is None:
+        Klass = instance.__class__
+        qs = Klass.objects.all().order_by('-pk')
+        if qs.exists():
+            id_ = qs.first().id + 1
+        else:
+            id_ = 0
+    if not slug:
+        slug = unique_slug_generator(instance.product)
+    location = "product/{slug}/{id}/".format(slug=slug, id=id_)
+    return location + filename  # "path/to/filename.mp4"
 
 
 # class ProductFile(models.Model):

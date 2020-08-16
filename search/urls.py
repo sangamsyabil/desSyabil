@@ -2,7 +2,7 @@ from django.urls import path
 
 from .views import SearchProductView
 
-app_name = 'search'
+app_name = 'des_search'
 
 urlpatterns = [
     path('', SearchProductView.as_view(), name='query'),
