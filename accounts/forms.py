@@ -3,9 +3,10 @@ from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.urls import reverse
 from django.utils.safestring import mark_safe
-from .models import EmailActivation, GuestEmail
 
 User = get_user_model()
+
+from .models import EmailActivation, GuestEmail
 
 
 class ReactivateEmailForm(forms.Form):
@@ -123,7 +124,7 @@ class LoginForm(forms.Form):
                 confirm_email = EmailActivation.objects.filter(email=email)
                 is_confirmable = confirm_email.confirmable().exists()
                 if is_confirmable:
-                    msg1 = "Please check your email to confirm your accounts or " + reconfirm_msg.lower()
+                    msg1 = "Please check your email to confirm your account or " + reconfirm_msg.lower()
                     raise forms.ValidationError(mark_safe(msg1))
                 email_confirm_exists = EmailActivation.objects.email_exists(email).exists()
                 if email_confirm_exists:
@@ -138,12 +139,38 @@ class LoginForm(forms.Form):
         self.user = user
         return data
 
+    # def form_valid(self, form):
+    #     request = self.request
+    #     next_ = request.GET.get('next')
+    #     next_post = request.POST.get('next')
+    #     redirect_path = next_ or next_post or None
+    #     email  = form.cleaned_data.get("email")
+    #     password  = form.cleaned_data.get("password")
+
+    #     print(user)
+    #     if user is not None:
+    #         if not user.is_active:
+    #             print('inactive user..')
+    #             messages.success(request, "This user is inactive")
+    #             return super(LoginView, self).form_invalid(form)
+    #         login(request, user)
+    #         user_logged_in.send(user.__class__, instance=user, request=request)
+    #         try:
+    #             del request.session['guest_email_id']
+    #         except:
+    #             pass
+    #         if is_safe_url(redirect_path, request.get_host()):
+    #             return redirect(redirect_path)
+    #         else:
+    #             return redirect("/")
+    #     return super(LoginView, self).form_invalid(form)
+
 
 class RegisterForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
     fields, plus a repeated password."""
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Password again', widget=forms.PasswordInput)
+    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
 
     class Meta:
         model = User

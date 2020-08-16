@@ -14,17 +14,17 @@ from django.utils import timezone
 
 from desSyabil.utils import random_string_generator, unique_key_generator
 
+# send_mail(subject, message, from_email, recipient_list, html_message)
+
 DEFAULT_ACTIVATION_DAYS = getattr(settings, 'DEFAULT_ACTIVATION_DAYS', 7)
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, full_name, password=None, is_active=True, is_staff=False, is_admin=False):
+    def create_user(self, email, full_name=None, password=None, is_active=True, is_staff=False, is_admin=False):
         if not email:
             raise ValueError("Users must have an email address")
         if not password:
             raise ValueError("Users must have a password")
-        if not full_name:
-            raise ValueError("Users must have a Full Name")
         user_obj = self.model(
             email=self.normalize_email(email),
             full_name=full_name
@@ -36,19 +36,19 @@ class UserManager(BaseUserManager):
         user_obj.save(using=self._db)
         return user_obj
 
-    def create_staffuser(self, email, full_name, password=None):
+    def create_staffuser(self, email, full_name=None, password=None):
         user = self.create_user(
             email,
-            full_name,
+            full_name=full_name,
             password=password,
             is_staff=True
         )
         return user
 
-    def create_superuser(self, email, full_name, password=None):
+    def create_superuser(self, email, full_name=None, password=None):
         user = self.create_user(
             email,
-            full_name,
+            full_name=full_name,
             password=password,
             is_staff=True,
             is_admin=True
@@ -58,18 +58,17 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser):
     email = models.EmailField(max_length=255, unique=True)
-    full_name = models.CharField(max_length=255)
+    full_name = models.CharField(max_length=255, blank=True, null=True)
     is_active = models.BooleanField(default=True)  # can login
-    staff = models.BooleanField(default=False)  # staff user
+    staff = models.BooleanField(default=False)  # staff user non superuser
     admin = models.BooleanField(default=False)  # superuser
     timestamp = models.DateTimeField(auto_now_add=True)
-    # confirm = models.BooleanField(default=False)
-    # confirmed_date = models.DateTimeField(default=False)
+    # confirm     = models.BooleanField(default=False)
+    # confirmed_date     = models.DateTimeField(default=False)
 
-    USERNAME_FIELD = 'email'  # replacement of default username
+    USERNAME_FIELD = 'email'  # username
     # USERNAME_FIELD and password are required by default
-
-    REQUIRED_FIELDS = ['full_name']
+    REQUIRED_FIELDS = []  # ['full_name'] #python manage.py createsuperuser
 
     objects = UserManager()
 
@@ -77,10 +76,12 @@ class User(AbstractBaseUser):
         return self.email
 
     def get_full_name(self):
-        return self.full_name
+        if self.full_name:
+            return self.full_name
+        return self.email
 
     def get_short_name(self):
-        return self.full_name
+        return self.email
 
     def has_perm(self, perm, obj=None):
         return True
@@ -97,6 +98,10 @@ class User(AbstractBaseUser):
     @property
     def is_admin(self):
         return self.admin
+
+    # @property
+    # def is_active(self):
+    #     return self.active
 
 
 class EmailActivationQuerySet(models.query.QuerySet):

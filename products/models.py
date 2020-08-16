@@ -12,6 +12,12 @@ from django.urls import reverse
 # from desSyabil.aws.utils import ProtectedS3Storage
 from desSyabil.utils import unique_slug_generator, get_filename
 
+LABEL_CHOICES = (
+    ('N', 'new'),
+    ('B', 'bestseller'),
+    ('C', 'clearance'),
+)
+
 
 def get_filename_ext(filepath):
     base_name = os.path.basename(filepath)
@@ -29,6 +35,19 @@ def upload_image_path(instance, filename):
         new_filename=new_filename,
         final_filename=final_filename
     )
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        verbose_name_plural = "Categories"
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse("products:category", kwargs={"name": self.name})
 
 
 class ProductQuerySet(models.query.QuerySet):
@@ -71,15 +90,26 @@ class ProductManager(models.Manager):
 class Product(models.Model):
     title = models.CharField(max_length=120)
     slug = models.SlugField(blank=True, unique=True)
-    description = models.TextField()
-    price = models.DecimalField(decimal_places=2, max_digits=20, default=39.99)
+
+    category = models.ManyToManyField(Category, blank=False)
+    label = models.CharField(choices=LABEL_CHOICES, max_length=1, blank=True)
+
+    price = models.DecimalField(decimal_places=2, max_digits=5, default=19.99)
+    discounted_price = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2)
+
+    description = models.TextField(default="Empty description")
     image = models.ImageField(upload_to=upload_image_path, null=True, blank=True)
+    quantity = models.IntegerField(default=10)
     featured = models.BooleanField(default=False)
+
     active = models.BooleanField(default=True)
     timestamp = models.DateTimeField(auto_now_add=True)
     is_digital = models.BooleanField(default=False)  # User Library
 
     objects = ProductManager()
+
+    class Meta:
+        ordering = ("title",)
 
     def get_absolute_url(self):
         # return "/products/{slug}/".format(slug=self.slug)
@@ -92,12 +122,16 @@ class Product(models.Model):
         return self.title
 
     @property
+    def is_available(self):
+        return self.quantity > 0
+
+    @property
     def name(self):
         return self.title
 
-    def get_downloads(self):
-        qs = self.productfile_set.all()
-        return qs
+    # def get_downloads(self):
+    #     qs = self.productfile_set.all()
+    #     return qs
 
 
 def product_pre_save_receiver(sender, instance, *args, **kwargs):
@@ -123,7 +157,6 @@ def upload_product_file_loc(instance, filename):
         slug = unique_slug_generator(instance.product)
     location = "product/{slug}/{id}/".format(slug=slug, id=id_)
     return location + filename  # "path/to/filename.mp4"
-
 
 # class ProductFile(models.Model):
 #     product = models.ForeignKey(Product)

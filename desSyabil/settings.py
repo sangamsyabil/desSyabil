@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'f2d2i@f*$fn^t%=hahb+%icg3qwu(7gx7iz$-tfo5d8(y@-jtr'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 MANAGERS = (
     ('Hem Raj Regmi', "sangamsyabil@gmail.com"),
@@ -63,8 +61,14 @@ LOGIN_URL_REDIRECT = '/'
 LOGOUT_URL = '/logout/'
 
 FORCE_SESSION_TO_ONE = False
-FORCE_INACTIVE_USER_ENDSESSION= False
+FORCE_INACTIVE_USER_ENDSESSION = False
 
+MAILCHIMP_API_KEY = "717d0854ed20fed3be3689a3f125915c-us17"
+MAILCHIMP_DATA_CENTER = "us17"
+MAILCHIMP_EMAIL_LIST_ID = "e2ef12efee"
+
+STRIPE_SECRET_KEY = "sk_test_cu1lQmcg1OLffhLvYrSCp5XE"
+STRIPE_PUB_KEY = 'pk_test_PrV61avxnHaWIYZEeiYTTVMZ'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,6 +80,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+LOGOUT_REDIRECT_URL = '/login/'
 ROOT_URLCONF = 'desSyabil.urls'
 
 TEMPLATES = [
@@ -96,7 +101,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'desSyabil.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -106,7 +110,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -126,7 +129,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -135,7 +137,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -152,3 +153,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
 PROTECTED_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'protected_media_root')
 VENV_PATH = os.path.join(BASE_DIR)
+
+
+CORS_REPLACE_HTTPS_REFERER = False
+HOST_SCHEME = "http://"
+SECURE_PROXY_SSL_HEADER = None
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_HSTS_SECONDS = None
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_FRAME_DENY = False

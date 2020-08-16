@@ -11,16 +11,17 @@ User = get_user_model()
 
 class UserAdmin(BaseUserAdmin):
     # The forms to add and change user instances
-    form = UserAdminChangeForm  # update view
-    add_form = UserAdminCreationForm  # create view
+    form = UserAdminChangeForm
+    add_form = UserAdminCreationForm
 
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
-    list_display = ('email', 'full_name', 'admin', 'staff', 'is_active')
+    list_display = ('email', 'admin')
     list_filter = ('admin', 'staff', 'is_active')
     fieldsets = (
-        ('Personal Info', {'fields': ('full_name', 'email', 'password')}),
+        (None, {'fields': ('full_name', 'email', 'password')}),
+        # ('Full name', {'fields': ()}),
         ('Permissions', {'fields': ('admin', 'staff', 'is_active',)}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
@@ -28,7 +29,7 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'full_name', 'password1', 'password2')}
+            'fields': ('email', 'password1', 'password2')}
          ),
     )
     search_fields = ('email', 'full_name',)
