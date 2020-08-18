@@ -3,8 +3,8 @@ from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.urls import reverse
 from django.utils.safestring import mark_safe
-
-User = get_user_model()
+from accounts.models import User
+# User = get_user_model()
 
 from .models import EmailActivation, GuestEmail
 
@@ -188,8 +188,8 @@ class RegisterForm(forms.ModelForm):
         # Save the provided password in hashed format
         user = super(RegisterForm, self).save(commit=False)
         user.set_password(self.cleaned_data["password1"])
-        user.is_active = False  # send confirmation email via signals
-        # obj = EmailActivation.objects.create(user=user)
+        # user.is_active = False  # send confirmation email via signals
+        obj = EmailActivation.objects.create(user=user)
         # obj.send_activation_email()
         if commit:
             user.save()

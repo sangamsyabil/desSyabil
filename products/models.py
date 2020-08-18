@@ -50,6 +50,27 @@ class Category(models.Model):
         return reverse("products:category", kwargs={"name": self.name})
 
 
+class SubCategory(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name_plural = "Sub-Categories"
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse("products:category", kwargs={"name": self.name})
+
+
+class Brand(models.Model):
+    name = models.CharField(max_length=120, blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+
 class ProductQuerySet(models.query.QuerySet):
     def active(self):
         return self.filter(active=True)
@@ -90,8 +111,10 @@ class Product(models.Model):
     title = models.CharField(max_length=120)
     slug = models.SlugField(blank=True, unique=True)
 
-    category = models.ManyToManyField(Category, blank=False)
+    # category = models.ForeignKey(Category, blank=False, on_delete=models.CASCADE)
+    subcategory = models.ForeignKey(SubCategory, blank=False, on_delete=models.CASCADE)
     label = models.CharField(choices=LABEL_CHOICES, max_length=1, blank=True)
+    brand = models.ForeignKey(Brand, blank=True, on_delete=models.CASCADE)
 
     price = models.DecimalField(decimal_places=2, max_digits=5, default=19.99)
     discounted_price = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2)
@@ -111,13 +134,9 @@ class Product(models.Model):
         ordering = ("title",)
 
     def get_absolute_url(self):
-        # return "/products/{slug}/".format(slug=self.slug)
         return reverse("products:detail", kwargs={"slug": self.slug})
 
     def __str__(self):
-        return self.title
-
-    def __unicode__(self):
         return self.title
 
     @property
