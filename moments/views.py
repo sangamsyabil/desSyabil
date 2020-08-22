@@ -2,7 +2,7 @@ from django.views.generic import ListView, DetailView, View, TemplateView
 
 
 class IndexView(ListView):
-    template_name = "home_page.html"
+    template_name = "index.html"
 
     def get_queryset(self):
         pass
@@ -16,6 +16,9 @@ class ReturnPolicyView(TemplateView):
     template_name = "staticPages/return_policy.html"
 
 
+class AboutUsView(TemplateView):
+    template_name = "staticPages/about_us.html"
+
 class ContactUsView(TemplateView):
     template_name = "staticPages/return_policy.html"
 
@@ -28,8 +31,8 @@ class CookiePolicyView(TemplateView):
     template_name = "staticPages/cookie_policy.html"
 
 
-class DeliveryPolicyView(TemplateView):
-    template_name = "staticPages/delivery_policy.html"
+class DeliveryInfoView(TemplateView):
+    template_name = "staticPages/delivery_info.html"
 
 
 class TermsView(TemplateView):
