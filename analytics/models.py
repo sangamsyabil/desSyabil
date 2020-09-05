@@ -9,7 +9,6 @@ from accounts.signals import user_logged_in
 from .signals import object_viewed_signal
 from .utils import get_client_ip
 
-
 FORCE_SESSION_TO_ONE = getattr(settings, 'FORCE_SESSION_TO_ONE', False)
 FORCE_INACTIVE_USER_ENDSESSION = getattr(settings, 'FORCE_INACTIVE_USER_ENDSESSION', False)
 
@@ -35,9 +34,11 @@ class ObjectViewedManager(models.Manager):
 class ObjectViewed(models.Model):
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)  # User instance instance.id
     ip_address = models.CharField(max_length=220, blank=True, null=True)  # IP Field
+
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)  # User, Product, Order, Cart, Address
     object_id = models.PositiveIntegerField()  # User id, Product id, Order id,
     content_object = GenericForeignKey('content_type', 'object_id')  # Product instance
+
     timestamp = models.DateTimeField(auto_now_add=True)
 
     objects = ObjectViewedManager()
@@ -72,12 +73,12 @@ class UserSession(models.Model):
     ip_address = models.CharField(max_length=220, blank=True, null=True)  # IP Field
     session_key = models.CharField(max_length=100, blank=True, null=True)  # min 50
     timestamp = models.DateTimeField(auto_now_add=True)
+
     active = models.BooleanField(default=True)
     ended = models.BooleanField(default=False)
 
     def end_session(self):
         session_key = self.session_key
-        ended = self.ended
         try:
             Session.objects.get(pk=session_key).delete()
             self.active = False
@@ -103,7 +104,7 @@ if FORCE_SESSION_TO_ONE:
 
 def post_save_user_changed_receiver(sender, instance, created, *args, **kwargs):
     if not created:
-        if instance.is_active == False:
+        if not instance.is_active:
             qs = UserSession.objects.filter(user=instance.user, ended=False, active=False)
             for i in qs:
                 i.end_session()

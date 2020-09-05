@@ -1,6 +1,5 @@
 import math
 import datetime
-from django.conf import settings
 from django.db import models
 from django.db.models import Count, Sum, Avg
 from django.db.models.signals import pre_save, post_save
@@ -17,6 +16,7 @@ ORDER_STATUS_CHOICES = (
     ('created', 'Created'),
     ('paid', 'Paid'),
     ('shipped', 'Shipped'),
+    ('refund_requested', 'Refund Requested'),
     ('refunded', 'Refunded'),
 )
 
@@ -221,7 +221,6 @@ post_save.connect(post_save_cart_total, sender=Cart)
 
 
 def post_save_order(sender, instance, created, *args, **kwargs):
-    # print("running")
     if created:
         print("Updating... first")
         instance.update_total()

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # our custom apps
     'accounts',
+    'userprofile',
     'addresses',
     'analytics',
     'billing',
@@ -53,12 +54,17 @@ INSTALLED_APPS = [
     'products',
     'search',
     'tags',
+
+    # others
+    'crispy_forms',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'  # changes the built-in user model to ours
 LOGIN_URL = '/login/'
 LOGIN_URL_REDIRECT = '/'
 LOGOUT_URL = '/logout/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 FORCE_SESSION_TO_ONE = False
 FORCE_INACTIVE_USER_ENDSESSION = False

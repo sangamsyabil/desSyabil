@@ -4,6 +4,7 @@
 
 {% url 'moments:trade-shows' as trade_shows_url %}
 {% url 'moments:about-us' as about_us_url %}
+{% url 'moments:job-openings' as job_openings_url %}
 {% url 'moments:return-policy' as return_policy_url %}
 {% url 'moments:delivery-info' as delivery_info_url %}
 {% url 'moments:privacy-policy' as privacy_policy_url %}
@@ -34,7 +35,7 @@
                 <ul>
                     <a href={{ about_us_url }}><li>About the Company</li></a>
                     <a href={{ trade_shows_url }}><li>Explore our Trade Shows</li></a>
-                    <a href="#"><li>Careers</li></a>
+                    <a href={{ job_openings_url }}><li>Careers</li></a>
                 </ul>
                 <span>Get Connected</span>
                 <ul>

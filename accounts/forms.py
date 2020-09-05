@@ -67,7 +67,7 @@ class UserAdminChangeForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ('full_name', 'email', 'password', 'is_active', 'admin')
+        fields = ('full_name', 'email', 'password', 'active', 'admin')
 
     def clean_password(self):
         # Regardless of what the user provides, return the initial value.
@@ -114,9 +114,9 @@ class LoginForm(forms.Form):
         qs = User.objects.filter(email=email)
         if qs.exists():
             # user email is registered, check active/
-            not_active = qs.filter(is_active=False)
+            not_active = qs.filter(active=False)
             if not_active.exists():
-                ## not active, check email activation
+                # not active, check email activation
                 link = reverse("account:resend-activation")
                 reconfirm_msg = """Go to <a href='{resend_link}'>
                 resend confirmation email</a>.

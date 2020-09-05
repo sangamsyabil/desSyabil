@@ -27,6 +27,7 @@ from .views import (
     ContactUsView,
     TradeShowsView,
     AboutUsView,
+    JobOpeningsView,
 )
 
 app_name = 'moments'
@@ -36,6 +37,7 @@ urlpatterns = [
     path('', IndexView.as_view(), name='home'),
 
     path('about-us/', AboutUsView.as_view(), name='about-us'),
+    path('job-openings/', JobOpeningsView.as_view(), name='job-openings'),
     path('trade-shows/', TradeShowsView.as_view(), name='trade-shows'),
     path('return-policy/', ReturnPolicyView.as_view(), name='return-policy'),
     path('delivery-info/', DeliveryInfoView.as_view(), name='delivery-info'),

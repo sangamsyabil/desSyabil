@@ -1,5 +1,7 @@
 {% extends 'base/base.html' %}
+
 {% block main %}
+{% url 'moments:contact-us' as contact_us_url %}
 
 {% include 'momentModules/header.html' %}
 
@@ -38,12 +40,12 @@
 
             <h5 class="card-title">5. Damaged Items in Transport </h5>
             <p class="card-text">
-                If there is any damage to the packaging on delivery, contact us immediately at <a class="link_inside_p" href="{% url 'moments:contact-us' %}">Contact us</a>.
+                If there is any damage to the packaging on delivery, contact us immediately at <a class="link_inside_p" href={{ contact_us_url }}>Contact us</a>.
             </p>
 
             <h5 class="card-title">6. Questions</h5>
             <p class="card-text">
-                If you have any questions about the delivery and shipment or your order, please contact us at <a class="link_inside_p" href="{% url 'moments:contact-us' %}">Contact us</a>.
+                If you have any questions about the delivery and shipment or your order, please contact us at <a class="link_inside_p" href={{ contact_us_url }}>Contact us</a>.
             </p>
         </div>
     </div>
