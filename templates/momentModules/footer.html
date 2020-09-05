@@ -1,25 +1,97 @@
 {% load static %}
-<footer class="des-footer">
+
+{% url 'moments:home' as home_url %}
+
+{% url 'moments:trade-shows' as trade_shows_url %}
+{% url 'moments:about-us' as about_us_url %}
+{% url 'moments:job-openings' as job_openings_url %}
+{% url 'moments:return-policy' as return_policy_url %}
+{% url 'moments:delivery-info' as delivery_info_url %}
+{% url 'moments:privacy-policy' as privacy_policy_url %}
+{% url 'moments:cookie-policy' as cookie_policy_url %}
+{% url 'moments:contact-us' as contact_us_url %}
+{% url 'moments:terms' as terms_url %}
+{% url 'moments:faq' as faq_url %}
+
+
+<footer class="upper-footer-base">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="footer-title">Customer Service</p>
-                <a class="des-footer-item" href="{% url 'moments:privacy-policy' %}">Privacy Policy</a>
-                <a class="des-footer-item" href="{% url 'moments:cookie-policy' %}">Cookie Policy</a>
-                <a class="des-footer-item" href="{% url 'moments:delivery-policy' %}">Delivery Policy</a>
-                <a class="des-footer-item" href="{% url 'moments:return-policy' %}">Return Policy</a>
-                <a class="des-footer-item" href="{% url 'moments:terms' %}">Terms of use</a>
+        <div class="upper-footer-container">
+            <div class="footer-departments">
+                <span>Shop Departmants</span>
+                <ul>
+                    <a href="#"><li>Sisha</li></a>
+                    <a href="#"><li>Pashmina</li></a>
+                    <a href="#"><li>Handicrafts</li></a>
+                    <a href="#"><li>Gift Ideas</li></a>
+                    <a href="#"><li>Jewelleries</li></a>
+                    <a href="#"><li>Garments</li></a>
+                    <a href="#"><li>Bags & Wallets</li></a>
+                    <a href="#"><li>Accessories</li></a>
+                </ul>
             </div>
-            <div class="col-md-6">
-                <p class="footer-title">Get Connected</p>
-                <a href="#" id="footer-facebook"></a>
-                <a href="#" id="footer-twitter"></a>
-                <a href="#" id="footer-instagram"></a>
-                <a class="des-footer-item" href="{% url 'moments:faq' %}">FAQ</a>
-                <a class="des-footer-item" href="{% url 'moments:contact-us' %}">Contact Us</a>
-                <a class="des-footer-item" href="{% url 'moments:trade-shows' %}">Explore our Trade-Shows</a>
-                <p class="p_with_small_font">© 2020 DesMoments - All Rights Reserved</p>
+            <div class="footer-about-us">
+                <span>About Us</span>
+                <ul>
+                    <a href={{ about_us_url }}><li>About the Company</li></a>
+                    <a href={{ trade_shows_url }}><li>Explore our Trade Shows</li></a>
+                    <a href={{ job_openings_url }}><li>Careers</li></a>
+                </ul>
+                <span>Get Connected</span>
+                <ul>
+                    <a href={{ contact_us_url }}><li>Contact Us</li></a>
+                    <a href={{ faq_url }}><li>Help Center / FAQ</li></a>
+                    <a href="#" id="footer-facebook"></a>
+                    <a href="#" id="footer-twitter"></a>
+                    <a href="#" id="footer-instagram"></a>
+                </ul>
+            </div>
+            <div class="footer-account-info">
+                <span>Account and Shipping Info</span>
+                <ul>
+                    <a href="#"><li>Your Account</li></a>
+                    <a href="#"><li>Shipping Rates & Policies</li></a>
+                    <a href="#"><li>Refund and Replacements</li></a>
+                    <a href="#"><li>Order Tracking</li></a>
+                    <a href={{ delivery_info_url }}><li>Delivery Information</li></a>
+                    <a href="#"><li>Taxes and Fees</li></a>
+                </ul>
             </div>
         </div>
     </div>
 </footer>
+<footer class="lower-footer-base">
+    <div class="container">
+        <div class="lower-footer-container">
+            <div class="fast-delivery">
+                <div id="faster-deliver-icon"></div>
+                <span>Fast and Free Devivery</span>
+                <p>Free delivery for over $100</p>
+            </div>
+            <div class="money-back">
+                <div id="money-back-icon"></div>
+                <span>Money Back Guarantee</span>
+                <p>We return money within 30 days</p>
+            </div>
+            <div class="customer-support">
+                <div id="customer-support-icon"></div>
+                <span>Excellent Customer Support</span>
+                <p>Friendly and excellent support</p>
+            </div>
+            <div class="online-payment">
+                <div id="online-payment-icon"></div>
+                <span>Secure Online Payment</span>
+                <p>We process SSL / Secure Certificate</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="lowest-footer">
+            <a href={{ terms_url }}><span>Terms of Use</span></a>
+            <a href={{ privacy_policy_url }}><span>Privacy Policy</span></a>
+            <a href={{ cookie_policy_url }}><span>Cookie Policy</span></a>
+            <p>© 2020 desSyabil - All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+

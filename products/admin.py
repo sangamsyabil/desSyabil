@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Product, Category
+from .models import Product, Category, SubCategory, Brand
 
 
 # from .models import Product, ProductFile
@@ -10,14 +10,26 @@ from .models import Product, Category
 #     model = ProductFile
 #     extra = 1
 
+class BrandAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    list_display_links = ('name',)
+    list_filter = ('name',)
+
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('name',)
     list_display_links = ('name',)
 
 
+class SubCategoryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category',)
+    list_display_links = ('name', 'category',)
+    list_filter = ('name', 'category',)
+
+
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('title', 'price', 'discounted_price', 'quantity', 'featured', 'is_digital')
-    list_filter = ('title', 'price', 'quantity', 'featured', 'is_digital')
+    list_display = ('title', 'price', 'discounted_price', 'quantity', 'featured', 'subcategory')
+    list_filter = ('title', 'price', 'quantity', 'featured', 'subcategory')
     list_editable = ('price', 'discounted_price', 'quantity',)
 
     prepopulated_fields = {'slug': ('title',)}
@@ -33,3 +45,5 @@ class ProductAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(SubCategory, SubCategoryAdmin)
+admin.site.register(Brand, BrandAdmin)

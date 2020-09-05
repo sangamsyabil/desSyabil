@@ -17,54 +17,54 @@ a:hover {
   text-decoration: none;
 }
 
-/* line 16, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+/* line 15, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
 .p_with_small_font {
   font-size: 12px;
 }
 
-/* line 23, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+/* line 22, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
 #test-heading {
   font-size: 24px;
 }
 
-/* line 26, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+/* line 25, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
 #test-title {
   font-size: 20px;
 }
 
-/* line 29, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+/* line 28, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
 #test-capitals {
   font-size: 18px;
 }
 
-/* line 32, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+/* line 31, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
 #test-medium-font {
   font-size: 16px;
 }
 
-/* line 35, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+/* line 34, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
 #test-small-font {
   font-size: 12px;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 40, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+  /* line 39, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
   #test-heading {
     font-size: 20px;
   }
-  /* line 43, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+  /* line 42, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
   #test-title {
     font-size: 18px;
   }
-  /* line 46, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+  /* line 45, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
   #test-capitals {
     font-size: 16px;
   }
-  /* line 49, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+  /* line 48, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
   #test-medium-font {
     font-size: 12px;
   }
-  /* line 52, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
+  /* line 51, ../../../../../PycharmProjects/desSyabil/static_files/scss/base/_parameters.scss */
   #test-small-font {
     font-size: 10px;
   }
@@ -105,95 +105,184 @@ a:hover {
   margin-top: 1rem;
 }
 
-/* line 1, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer {
-  margin: 20px 0px;
-  padding: 20px 0px;
-  border-top: 1px solid #374794;
-  border-bottom: 1px solid #374794;
+/* line 2, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.upper-footer-base {
+  background-color: #eeeeee;
+  height: 100%;
+  border-top: 1px solid #ff6347;
+  margin: 0px;
 }
 
-/* line 7, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer p.footer-title {
-  font-size: 20px;
+/* line 8, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.upper-footer-container {
+  display: flex;
+  justify-content: space-around;
 }
 
-/* line 11, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a.des-footer-item {
+@media (max-width: 600px) {
+  /* line 13, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+  .upper-footer-container {
+    flex-direction: column;
+  }
+}
+
+/* line 19, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.upper-footer-container div {
+  padding-top: 30px;
+  width: 100%;
+}
+
+/* line 36, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.upper-footer-container div span {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 30px;
+}
+
+/* line 42, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.upper-footer-container div ul li {
+  list-style: none;
+  margin-left: -40px;
+  padding: 5px 5px;
+  width: 100%;
+}
+
+/* line 48, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.upper-footer-container div ul li:hover {
+  cursor: pointer;
   border-left: 4px solid #9d2832;
-  display: block;
-  font-size: 16px;
-  height: 25px;
-  line-height: 25px;
-  width: 50%;
-  padding-left: 10px;
-  margin: 10px 0px;
-  text-decoration: none;
   border-radius: 0px 5px 5px 0px;
   -webkit-box-shadow: #cccccc 0 0 16px;
   -moz-box-shadow: #cccccc 0 0 16px;
   box-shadow: #cccccc 0 0 16px;
 }
 
-/* line 27, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a.des-footer-item:hover {
-  background-color: #374794;
-  color: #ffffff;
+/* line 60, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.footer-about-us a#footer-facebook {
+  margin-left: -40px;
 }
 
-@media only screen and (max-width: 600px) {
-  /* line 32, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-  .des-footer a.des-footer-item {
-    width: 100%;
-    margin: 10px 0px;
-  }
-  /* line 36, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-  .des-footer a.des-footer-item:last-child {
-    margin-bottom: 30px;
-  }
-}
-
-/* line 42, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a#footer-facebook,
-.des-footer a#footer-twitter,
-.des-footer a#footer-instagram {
+/* line 64, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.footer-about-us a#footer-facebook,
+.footer-about-us a#footer-twitter,
+.footer-about-us a#footer-instagram {
   height: 30px;
   width: 30px;
   margin-right: 20px;
+  margin-top: 15px;
   display: inline-block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* line 55, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a#footer-facebook {
+/* line 78, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.footer-about-us a#footer-facebook {
   background-image: url("/static/img/facebook.png");
 }
 
-/* line 58, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a#footer-facebook:hover {
+/* line 81, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.footer-about-us a#footer-facebook:hover {
   background-image: url("/static/img/facebook_hover.png");
 }
 
-/* line 61, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a#footer-twitter {
+/* line 84, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.footer-about-us a#footer-twitter {
   background-image: url("/static/img/twitter.png");
 }
 
-/* line 64, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a#footer-twitter:hover {
+/* line 87, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.footer-about-us a#footer-twitter:hover {
   background-image: url("/static/img/twitter_hover.png");
 }
 
-/* line 67, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a#footer-instagram {
+/* line 90, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.footer-about-us a#footer-instagram {
   background-image: url("/static/img/instagram.png");
 }
 
-/* line 70, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
-.des-footer a#footer-instagram:hover {
+/* line 93, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.footer-about-us a#footer-instagram:hover {
   background-image: url("/static/img/instagram_hover.png");
+}
+
+/* line 101, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.lower-footer-base {
+  background-color: #ff6347;
+  color: #ffffff;
+}
+
+/* line 106, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.lower-footer-container {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ffffff;
+  padding: 20px 0px;
+}
+
+@media (max-width: 600px) {
+  /* line 113, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+  .lower-footer-container {
+    flex-direction: column;
+  }
+}
+
+/* line 118, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.lower-footer-container span {
+  font-weight: 600;
+}
+
+/* line 121, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.lower-footer-container p {
+  color: #eeeeee;
+  padding-left: 40px;
+}
+
+/* line 142, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.fast-delivery div#faster-deliver-icon,
+.money-back div#money-back-icon,
+.customer-support div#customer-support-icon,
+.online-payment div#online-payment-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: -20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 156, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.fast-delivery div#faster-deliver-icon {
+  background-image: url("/static/img/instagram.png");
+}
+
+/* line 159, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.money-back div#money-back-icon {
+  background-image: url("/static/img/instagram.png");
+}
+
+/* line 162, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.customer-support div#customer-support-icon {
+  background-image: url("/static/img/instagram.png");
+}
+
+/* line 165, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.online-payment div#online-payment-icon {
+  background-image: url("/static/img/instagram.png");
+}
+
+/* line 170, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.lowest-footer {
+  padding: 10px 0px;
+  font-size: 12px;
+}
+
+/* line 174, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_footer.scss */
+.lowest-footer span {
+  padding-right: 20px;
 }
 
 /* line 2, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_account.scss */
@@ -314,7 +403,7 @@ a:hover {
 
 /* line 66, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .des-badge-clearance {
-  background-color: #D4EDDA;
+  background-color: #ff6347;
   color: #374794;
 }
 
@@ -338,7 +427,7 @@ a:hover {
 .pagination > li > span:focus,
 .pagination > li > span:hover {
   color: #ffffff;
-  background-color: #D4EDDA !important;
+  background-color: #ff6347 !important;
 }
 
 /* line 94, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
@@ -349,7 +438,7 @@ a:hover {
 
 /* line 99, ../../../../../PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .pagination > .active > a:hover {
-  background-color: #D4EDDA !important;
+  background-color: #ff6347 !important;
 }
 
 /* line 1, ../../../../../PycharmProjects/desSyabil/static_files/scss/modules/_buttons.scss */
@@ -368,14 +457,14 @@ a:hover {
 
 /* line 12, ../../../../../PycharmProjects/desSyabil/static_files/scss/modules/_buttons.scss */
 .des-button-secondary {
-  border: 1px solid #D4EDDA;
+  border: 1px solid #ff6347;
   padding: 8px 15px;
   border-radius: 5px;
 }
 
 /* line 17, ../../../../../PycharmProjects/desSyabil/static_files/scss/modules/_buttons.scss */
 .des-button-secondary:hover {
-  background-color: #D4EDDA;
+  background-color: #ff6347;
   color: #ffffff;
 }
 
@@ -868,7 +957,7 @@ h2.product-title {
 
 /* line 35, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_product_details.scss */
 .des-badge-clearance {
-  background-color: #D4EDDA;
+  background-color: #ff6347;
   color: #374794;
 }
 
@@ -885,14 +974,15 @@ h2.product-title {
 /* line 1, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .static-page-panel {
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
-/* line 4, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
+/* line 5, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .static-page-panel .card-header {
   font-size: 24px;
 }
 
-/* line 9, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
+/* line 10, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .faq-title {
   font-size: 16px;
   text-decoration: none;
@@ -905,14 +995,14 @@ h2.product-title {
   cursor: pointer;
 }
 
-/* line 22, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
+/* line 23, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .faq-body {
   margin-left: 10px;
-  border-left: 2px solid #D4EDDA;
+  border-left: 2px solid #ff6347;
   padding-left: 10px;
 }
 
-/* line 28, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
+/* line 29, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .link_inside_p {
   background-color: #374794;
   color: #ffffff;
@@ -920,12 +1010,12 @@ h2.product-title {
   border-radius: 5px;
 }
 
-/* line 34, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
+/* line 35, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .link_inside_p:hover {
   color: #ffffff;
 }
 
-/* line 39, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
+/* line 40, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .no-items-to-show {
   width: 100%;
   height: 60px;
@@ -939,7 +1029,7 @@ h2.product-title {
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* line 64, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
+/* line 65, ../../../../../PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .company_address {
   height: 70px;
   width: 140px;

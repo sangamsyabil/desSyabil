@@ -32,7 +32,7 @@ class UserManager(BaseUserManager):
         user_obj.set_password(password)  # change user password
         user_obj.staff = is_staff
         user_obj.admin = is_admin
-        user_obj.is_active = is_active
+        user_obj.active = is_active
         user_obj.save(using=self._db)
         return user_obj
 
@@ -59,7 +59,8 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser):
     email = models.EmailField(max_length=255, unique=True)
     full_name = models.CharField(max_length=255, blank=True, null=True)
-    is_active = models.BooleanField(default=True)  # can login
+
+    active = models.BooleanField(default=True)  # can login
     staff = models.BooleanField(default=False)  # staff user non superuser
     admin = models.BooleanField(default=False)  # superuser
     timestamp = models.DateTimeField(auto_now_add=True)
@@ -99,9 +100,9 @@ class User(AbstractBaseUser):
     def is_admin(self):
         return self.admin
 
-    # @property
-    # def is_active(self):
-    #     return self.active
+    @property
+    def is_active(self):
+        return self.active
 
 
 class EmailActivationQuerySet(models.query.QuerySet):
