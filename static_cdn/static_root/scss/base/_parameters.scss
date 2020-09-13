@@ -7,17 +7,26 @@ a{
   color: $primary-color;
 }
 a:hover{
-  //color: $secondary-color;
   cursor:pointer;
   text-decoration: none;
 }
 
+.des-hr-tag{
+  border-top: 1px solid $primary-color;
+  margin: 10px 0px 0px 0px;
+  padding: 5px;
+}
 
 .p_with_small_font{
   font-size: $font-size-small;
 }
 
-
+.form-control:focus {
+    border-color: $primary-color !important;
+    -webkit-box-shadow: $form-control-focus;
+    -moz-box-shadow: $form-control-focus;
+    box-shadow: $form-control-focus;
+}
 
 
 #test-heading{

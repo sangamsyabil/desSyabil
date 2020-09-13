@@ -28,9 +28,9 @@ class SubCategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('title', 'price', 'discounted_price', 'quantity', 'featured', 'subcategory')
+    list_display = ('title', 'price', 'discount_price', 'quantity', 'featured', 'subcategory')
     list_filter = ('title', 'price', 'quantity', 'featured', 'subcategory')
-    list_editable = ('price', 'discounted_price', 'quantity',)
+    list_editable = ('price', 'discount_price', 'featured', 'quantity',)
 
     prepopulated_fields = {'slug': ('title',)}
 

@@ -1,35 +1,140 @@
 {% load static %}
-<div class="des-header">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">DesMoments</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-<!--                    <li>Place for new menu items (if applicable)</li>-->
-                </ul>
-                <div class="form-inline">
-                    {% if request.user.is_authenticated %}
-                            <a href="#" class="des-button-primary">My Profile</a>
-                            <a href="#" class="des-button-primary">Logout</a>
-                        <a href="#">
-                            <img  id="cart-icon" src="{% static 'img/cart.png' %}">
-                        </a>
-                        <p id="cart-total">{{ request.user }}</p>
-                    {% else %}
-                        <a href="#" class="des-button-primary">Login</a>
-                        <a href="#" class="des-button-primary">Signup</a>
-                    {% endif %}
+{% url 'moments:home' as home_url %}
+{% url 'cart:home' as cart_url %}
+{% url 'moments:home' as wishlist_url %}
+{% url 'account:login' as login_url %}
+{% url 'account:register' as register_url %}
+{% url 'account:logout' as logout_url %}
+{% url '' as user_profile_url %}
 
-                </div>
+{# for lower header urls #}
+{% url '' as best_sellers_url %}
+{% url '' as new_releases_url %}
+{% url '' as on_sale_url %}
+{% url '' as most_populars_url %}
+{% url '' as pashmina_url %}
+{% url '' as handicrafts_url %}
+{% url '' as sisha_url %}
+{% url '' as jewelleries_url %}
+{% url '' as gift_ideas_url %}
+
+<div class="container">
+    <div class="des-navbar-base">
+        <div class="des-navbar-desktop-base">
+            <!-- brand -->
+            <a href={{ home_url }}><div class="navbar-brand-base">
+                <div class="navbar-brand-image"></div>
+                <div class="navbar-brand-name">DesMoments</div>
+            </div></a>
+
+            <!-- Search panel -->
+            <div class="navbar-search-penel-base">
+                <form method='GET' action='{% url "search:query" %}' class="form-inline">
+                    <div class="form-search-icon"></div>
+                    <input class="form-control form-control-lg navbar-search-area" type="text" placeholder="What are you looking for?" name='q' aria-label="Search" value='{{ request.GET.q }}'>
+                </form>
             </div>
-        </nav>
+
+            <!-- wishlist -->
+            <a href={{ wishlist_url }}><div class="navbar-wishlist-base"></div></a>
+
+            <!-- account and orders -->
+            {% if request.user.is_authenticated %}
+                <a href={{ user_profile_url }}><div class="navbar-account-orders-base">
+                    <div class="navbar-account-user-icon"></div>
+                    <div class="navbar-my-account"><span>Hi, {{ request.user.get_short_name }}</span>My Profile</div>
+                </div></a>
+            {% else %}
+                <a href={{ login_url }}><div class="navbar-account-orders-base">
+                    <div class="navbar-account-user-icon"></div>
+                    <div class="navbar-my-account"><span>Hello, Sign in</span>My Account</div>
+                </div></a>
+            {% endif %}
+
+            <!-- carts -->
+            <a href={{ cart_url }}><div class="navbar-cart-base">
+                <div class="navbar-cart-icon">
+                    <span class="badge badge-light">{% if request.session.cart_items > 0  %}{{ request.session.cart_items }}{% endif %}</span>
+                </div>
+                <div class="navbar-cart-info">My Cart</div>
+            </div></a>
+        </div>
+        <div class="des-navbar-mobile-base">
+            <!-- brand -->
+            <a href={{ home_url }}><div class="navbar-brand-base">
+                <div class="navbar-brand-image"></div>
+                <div class="navbar-brand-name">DesMoments</div>
+            </div></a>
+
+            <!-- hamburger menu -->
+            <a href="#"><div class="navbar-mobile-menu-icon"></div></a>
+
+            <!-- account and orders -->
+            <a href="#"><div class="navbar-account-user-icon"></div></a>
+
+            <!-- carts -->
+            <a href={{ cart_url }}><div class="navbar-cart-icon">
+                <span class="badge badge-light">{% if request.session.cart_items > 0  %}{{ request.session.cart_items }}{% endif %}</span>
+            </div></a>
+        </div>
     </div>
 </div>
 
+<div class="container">
+    <div class="navbar-mobile-detail-menu">
+
+        <form method='GET' action='{% url "search:query" %}' class="form-inline">
+            <div class="form-search-icon"></div>
+            <input class="form-control form-control-lg navbar-search-area" type="text" placeholder="What are you looking for?" name='q' aria-label="Search" value='{{ request.GET.q }}'>
+        </form>
+        <span class="des-mobile-item-seperator">Accounts & Actions</span>
+        <a href=""><div class="mobile-menu-item">My Account <span></span></div></a>
+        <a href=""><div class="mobile-menu-item">Wishlist <span></span></div></a>
+
+        <span class="des-mobile-item-seperator">Shop Categories</span>
+
+        <a href=""><div class="mobile-menu-item">Pashmina <span></span></div></a>
+        <a href=""><div class="mobile-menu-item">Precious Stones <span></span></div></a>
+        <a href=""><div class="mobile-menu-item">Jewelleries <span></span></div></a>
+        <a href=""><div class="mobile-menu-item">Garments <span></span></div></a>
+
+        <span class="des-mobile-item-seperator">Shop</span>
+    </div>
+</div>
+
+<div class="container navbar-mobile-account-menu-base">
+    <div class="navbar-mobile-account-menu">
+
+        {% if request.user.is_authenticated %}
+            <a href={{ logout_url }}><div class="mobile-account-primary-button">Logout</div></a>
+        {% else %}
+            <a href={{ login_url }}><div class="mobile-account-primary-button">Log in</div></a>
+            <a href={{ register_url }}><div class="mobile-account-secondary-button">Register</div></a>
+        {% endif %}
+
+        <span class="des-mobile-item-seperator">Shop</span>
+
+    </div>
+</div>
+
+<div class="des-navbar-lower-desktop">
+    <a href={{ best_sellers_url }}><div class="{% if request.path == best_sellers_url %}active{% endif %}">Best Sellers</div> </a>
+    <a href={{ new_releases_url }}><div class="{% if request.path == new_releases_url %}active{% endif %}">New Releases</div> </a>
+    <a href={{ on_sale_url }}><div class="{% if request.path == on_sale_url %}active{% endif %}">On SALE</div></a>
+    <a href={{ most_populars_url }}><div class="{% if request.path == most_populars_url %}active{% endif %}">Most Populars</div></a>
+    <a href={{ pashmina_url }}><div class="{% if request.path == pashmina_url %}active{% endif %}">Pashmina</div></a>
+    <a href={{ handicrafts_url }}><div class="{% if request.path == handicrafts_url %}active{% endif %}">Handicrafts</div></a>
+    <a href={{ sisha_url }}><div class="{% if request.path == sisha_url %}active{% endif %}">Sisha</div></a>
+    <a href={{ jewelleries_url }}><div class="{% if request.path == jewelleries_url %}active{% endif %}">Jewelleries</div></a>
+    <a href={{ gift_ideas_url }}><div class="{% if request.path == gift_ideas_url %}active{% endif %}">Gift Ideas</div></a>
+</div>
+<div class="des-navbar-lower-mobile">
+    <a href={{ best_sellers_url }}><div class="{% if request.path == best_sellers_url %}active{% endif %}">Best Sellers</div> </a>
+    <a href={{ new_releases_url }}><div class="{% if request.path == new_releases_url %}active{% endif %}">New Releases</div> </a>
+    <a href={{ on_sale_url }}><div class="{% if request.path == on_sale_url %}active{% endif %}">On SALE</div></a>
+    <a href={{ gift_ideas_url }}><div class="{% if request.path == gift_ideas_url %}active{% endif %}">Gift Ideas</div></a>
+</div>
 
 {% if messages %}
     {% for message in messages %}

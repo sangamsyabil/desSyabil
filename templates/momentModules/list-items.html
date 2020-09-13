@@ -1,40 +1,56 @@
 {% load static %}
 
 
-<div class="">
-    <div class="product-outer-panel">
+<!-- Some url used -->
+{% url 'cart:home' as cart_url %}
+
+
+<div class="container">
+    <div class="product-list-display-base">
         {% for item in object_list %}
-        <div class="product-panel">
-            <a href="{{ item.get_absolute_url }}">
-                {% if item.picture %}
-                <div class="thumbnail" style="background-image: url('{{ item.picture_url }}');"></div>
+        <div class="product-item-display-base">
+
+            <!-- product item picture -->
+            <a href={{ item.get_absolute_url }}>
+                {% if item.image %}
+                    <div class="product-item-image" style="background-image: url('{{ item.get_image_url }}');">
                 {% else %}
-                <div class="thumbnail" style="background-image: url('/static/img/des_placeholder.png');"></div>
+                    <div class="product-item-image" style="background-image: url('/static/img/des_placeholder.png');">
                 {% endif %}
-            </a>
+                <div class="product-item-add-fav">
+                    <div style="background-image: url('/static/img/heart.png');"></div>
+                </div>
+            </div></a>
 
-            <h6><strong><a href="{{ item.get_absolute_url }}">{{ item.name }}</a></strong></h6>
+            <!-- product item name -->
+            <a href={{ item.get_absolute_url }}><div class="product-item-name">
+                {{ item.name|truncatechars:42 }}
+            </div></a>
 
-            <p>{{ item.get_category_display }}
-                <span class="badge badge-pill des-badge-{{ item.get_label_display }}">{{ item.get_label_display }}</span>
-            </p>
+            <!-- product item category and tag -->
+            <div class="product-category-name-tag">
+                <a href=""><div class="product-category-name">{{ item.subcategory.category }}</div></a>
+                <div class="badge badge-pill des-badge-{{ item.get_label_display }}">{{ item.get_label_display }}</div>
+            </div>
 
-            <a href="{{ item.get_add_to_cart_url }}"><button class="add-to-cart">Add to Cart</button></a>
+            <!-- product item add to cart and price -->
+            <div class="item-add-to-cart-price">
 
-            <h6 class="store-item-price">
+                {% include 'products/snippets/update-cart.html' with product=item cart=cart %}
+
                 {% if item.discount_price %}
-                    <span class="store-item-price-discount">${{ item.price }}</span>${{ item.discount_price }}
-                    {% else %}
-                    ${{ item.price }}
+                    <div class="item-actual-price">was<span>${{ item.price }}</span></div>
+                    <div class="item-discounted-price">${{ item.discount_price }}</div>
+                {% else %}
+                    <div class="item-discounted-price">${{ item.price }}</div>
                 {% endif %}
-            </h6>
+            </div>
         </div>
         {% empty %}
-        <div class="no-items-to-show">No items to display</div>
+            <div class="no-items-to-show">No items to display</div>
         {% endfor %}
     </div>
 </div>
-
 
 {% if is_paginated %}
 <div class="d-flex justify-content-center des-pagination">

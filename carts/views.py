@@ -40,6 +40,7 @@ def cart_home(request):
 
 def cart_update(request):
     product_id = request.POST.get('product_id')
+    print(product_id)
 
     if product_id is not None:
         try:

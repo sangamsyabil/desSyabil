@@ -2,17 +2,31 @@
 
 {% url 'moments:home' as home_url %}
 
+{# about us urls #}
 {% url 'moments:trade-shows' as trade_shows_url %}
 {% url 'moments:about-us' as about_us_url %}
 {% url 'moments:job-openings' as job_openings_url %}
+
+{# account and shipping info urls #}
 {% url 'moments:return-policy' as return_policy_url %}
 {% url 'moments:delivery-info' as delivery_info_url %}
 {% url 'moments:privacy-policy' as privacy_policy_url %}
 {% url 'moments:cookie-policy' as cookie_policy_url %}
+
+{# get connected urls #}
 {% url 'moments:contact-us' as contact_us_url %}
 {% url 'moments:terms' as terms_url %}
 {% url 'moments:faq' as faq_url %}
 
+{# shop by departments urls #}
+{% url 'moments:home' as pashmina_url %}
+{% url 'moments:home' as handicrafts_url %}
+{% url 'moments:home' as sisha_url %}
+{% url 'moments:home' as jewelleries_url %}
+{% url 'moments:home' as gift_ideas_url %}
+{% url 'moments:home' as garments_url %}
+{% url 'moments:home' as bags_wallet_url %}
+{% url 'moments:home' as accessories_url %}
 
 <footer class="upper-footer-base">
     <div class="container">
@@ -20,14 +34,14 @@
             <div class="footer-departments">
                 <span>Shop Departmants</span>
                 <ul>
-                    <a href="#"><li>Sisha</li></a>
-                    <a href="#"><li>Pashmina</li></a>
-                    <a href="#"><li>Handicrafts</li></a>
-                    <a href="#"><li>Gift Ideas</li></a>
-                    <a href="#"><li>Jewelleries</li></a>
-                    <a href="#"><li>Garments</li></a>
-                    <a href="#"><li>Bags & Wallets</li></a>
-                    <a href="#"><li>Accessories</li></a>
+                    <a href={{ sisha_url }}><li>Sisha</li></a>
+                    <a href={{ pashmina_url }}><li>Pashmina</li></a>
+                    <a href={{ handicrafts_url }}><li>Handicrafts</li></a>
+                    <a href={{ gift_ideas_url }}><li>Gift Ideas</li></a>
+                    <a href={{ jewelleries_url }}><li>Jewelleries</li></a>
+                    <a href={{ garments_url }}><li>Garments</li></a>
+                    <a href={{ bags_wallet_url }}><li>Bags & Wallets</li></a>
+                    <a href={{ accessories_url }}><li>Accessories</li></a>
                 </ul>
             </div>
             <div class="footer-about-us">
@@ -49,7 +63,7 @@
             <div class="footer-account-info">
                 <span>Account and Shipping Info</span>
                 <ul>
-                    <a href="#"><li>Your Account</li></a>
+                    <a href="#"><li>My Account</li></a>
                     <a href="#"><li>Shipping Rates & Policies</li></a>
                     <a href="#"><li>Refund and Replacements</li></a>
                     <a href="#"><li>Order Tracking</li></a>
