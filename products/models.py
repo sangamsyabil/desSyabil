@@ -117,7 +117,7 @@ class Product(models.Model):
     brand = models.ForeignKey(Brand, blank=True, on_delete=models.CASCADE)
 
     price = models.DecimalField(decimal_places=2, max_digits=5, default=19.99)
-    discounted_price = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2)
+    discount_price = models.DecimalField(blank=True, null=True, max_digits=5, decimal_places=2)
 
     description = models.TextField(default="Empty description")
     image = models.ImageField(upload_to=upload_image_path, null=True, blank=True)
@@ -135,6 +135,13 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         return reverse("products:detail", kwargs={"slug": self.slug})
+
+    def get_image_url(self):
+        try:
+            url = self.image.url
+        except:
+            url = ''
+        return url
 
     def __str__(self):
         return self.title

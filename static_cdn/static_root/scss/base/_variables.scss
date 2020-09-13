@@ -9,22 +9,27 @@ $hover-amount: 50%;
 
 // colors
 $primary-color: #374794;
-$secondary-color: #D4EDDA;
+$secondary-color: #ff6347;
+//$secondary-color: #D4EDDA;
 $bright-color: #9d2832;
 $background-color: #ffffff;
 $link-color: #ffffff;
 $link-active-color: #000000;
 $background-color-light: #eeeeee;
 
+$box-shadow-pallet: hsl(0, 0%, 80%) 0 0 16px;
+$form-control-focus: 0px 0px 8px $primary-color !important;
+
 // font sizes
 $font-size-heading: 24px;
 $font-size-title: 20px;
 $font-size-capitals: 18px;
 $font-size-medium: 16px;
+$font-size-medium-small: 14px;
 $font-size-small: 12px;
 $font-size-icons: 20px;
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 769px) {
   $font-size-heading: 20px;
   $font-size-title: 18px;
   $font-size-capitals: 16px;
@@ -32,5 +37,19 @@ $font-size-icons: 20px;
   $font-size-small: 10px;
   $font-size-icons: 16px;
 }
+
+
+
+// product item base sizes
+$product-outer-base-height: 330px;
+$product-outer-base-width: 250px;
+$product-item-image-width: 100%;
+$product-item-image-height: 220px;
+$product-item-name-height: 30px;
+$product-item-name-width: 100%;
+$product-item-category-height: 20px;
+$product-item-category-width: 100%;
+$product-item-add-to-cart-height: 50px;
+$product-item-add-to-cart-width: 100%;
 
 

@@ -4,14 +4,12 @@
 
 
 {% block main %}
-
-{% include 'momentModules/header.html' %}
-
+    
 <div class="container">
     <div class="account-panel">
         <h2 class="account-title">Have you checked out FAQ?</h2>
         <p>Before reaching out, you might want to check out FAQ page. This may answer questions you have about the site and policies.</p>
-        <a href="{{ faq_url }}"><button class="des-button-primary">Visit FAQ</button></a>
+        <a href={{ faq_url }}><button class="des-button-primary">Visit FAQ</button></a>
     </div>
 </div>
 
@@ -27,6 +25,5 @@
     </div>
 </div>
 
-{% include 'momentModules/footer.html' %}
 
 {% endblock main %}

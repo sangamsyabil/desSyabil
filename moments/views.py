@@ -1,18 +1,27 @@
-from .forms import ContactUsForm
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.views.generic import ListView, View, TemplateView
 
+from carts.models import Cart
+from products.models import Product
 from .forms import ContactUsForm
 
 
 class IndexView(ListView):
+    paginate_by = 4
     template_name = "index.html"
 
-    def get_queryset(self):
-        pass
+    def get_context_data(self, *args, **kwargs):
+        context = super(IndexView, self).get_context_data(*args, **kwargs)
+        cart_obj, new_obj = Cart.objects.new_or_get(self.request)
+        context['cart'] = cart_obj
+        return context
+
+    def get_queryset(self, *args, **kwargs):
+        request = self.request
+        return Product.objects.all().order_by('?')
 
 
 class ContactUsView(View):
