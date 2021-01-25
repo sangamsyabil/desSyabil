@@ -15,12 +15,13 @@
                 {% if item.image %}
                     <div class="product-item-image" style="background-image: url('{{ item.get_image_url }}');">
                 {% else %}
-                    <div class="product-item-image" style="background-image: url('/static/img/des_placeholder.png');">
+                    <div class="product-item-image" style="background-image: url('/static/img/image-placeholder.jpg');">
                 {% endif %}
                 <div class="product-item-add-fav">
                     <div style="background-image: url('/static/img/heart.png');"></div>
                 </div>
-            </div></a>
+                </div>
+            </a>
 
             <!-- product item name -->
             <a href={{ item.get_absolute_url }}><div class="product-item-name">
@@ -47,7 +48,7 @@
             </div>
         </div>
         {% empty %}
-            <div class="no-items-to-show">No items to display</div>
+            <div class="no-items-to-show">No Items to Display</div>
         {% endfor %}
     </div>
 </div>

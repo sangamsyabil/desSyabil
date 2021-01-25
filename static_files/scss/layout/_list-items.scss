@@ -2,7 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
+	justify-content: left;
 
 	.product-item-display-base{
 		border-radius: 3px;
@@ -12,8 +12,9 @@
 
 		height: $product-outer-base-height;
 		width: $product-outer-base-width;
-		margin: 5px;
+		margin: 20px 5px;
 		flex-grow: 1;
+		max-width: 280px;
 
 		.product-item-image{
 			height: $product-item-image-height;
