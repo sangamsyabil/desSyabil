@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # APIs
+    'rest_framework',
+
     # our custom apps
     'accounts',
     'userprofile',
@@ -135,6 +138,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        # 'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
@@ -159,7 +174,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'static_root')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'media_root')
 PROTECTED_ROOT = os.path.join(BASE_DIR, 'static_cdn', 'protected_media_root')
 VENV_PATH = os.path.join(BASE_DIR)
-
 
 CORS_REPLACE_HTTPS_REFERER = False
 HOST_SCHEME = "http://"

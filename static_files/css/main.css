@@ -85,7 +85,304 @@ a:hover {
   }
 }
 
+/* line 3, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_components_base.scss */
+blockquote {
+  background: #eeeeee;
+  border-left: 4px solid #ff6347;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+/* line 9, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_components_base.scss */
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+/* line 17, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_components_base.scss */
+blockquote p {
+  display: inline;
+  font-size: 18px;
+  font-style: italic;
+}
+
+/* line 2, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.home-shop-by-department {
+  margin-top: 30px;
+}
+
+/* line 5, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.home-shop-by-department h2 {
+  border-bottom: 1px solid #374794;
+  font-size: 20px;
+}
+
+/* line 10, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments {
+  margin: 30px 0px 60px 0px;
+}
+
+/* line 13, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 19, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base {
+  flex-grow: 1;
+  text-align: center;
+  height: 140px;
+  width: 140px;
+}
+
+/* line 26, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base span {
+  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+}
+
+/* line 32, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base .department-one-image,
+.shop-by-departments .department-base .department-item-base .department-two-image,
+.shop-by-departments .department-base .department-item-base .department-three-image,
+.shop-by-departments .department-base .department-item-base .department-four-image,
+.shop-by-departments .department-base .department-item-base .department-five-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 46, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base .department-one-image:hover,
+.shop-by-departments .department-base .department-item-base .department-two-image:hover,
+.shop-by-departments .department-base .department-item-base .department-three-image:hover,
+.shop-by-departments .department-base .department-item-base .department-four-image:hover,
+.shop-by-departments .department-base .department-item-base .department-five-image:hover {
+  -webkit-box-shadow: #cccccc 0 0 16px;
+  -moz-box-shadow: #cccccc 0 0 16px;
+  box-shadow: #cccccc 0 0 16px;
+}
+
+/* line 56, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base .department-one-image {
+  background-image: url("/static/img/gift-box.jpg");
+}
+
+/* line 57, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base .department-two-image {
+  background-image: url("/static/img/leather-wallet.jpg");
+}
+
+/* line 58, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base .department-three-image {
+  background-image: url("/static/img/necklace.jpg");
+}
+
+/* line 59, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base .department-four-image {
+  background-image: url("/static/img/winter-scarf.jpg");
+}
+
+/* line 60, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+.shop-by-departments .department-base .department-item-base .department-five-image {
+  background-image: url("/static/img/phone-case.jpg");
+}
+
+@media only screen and (max-width: 769px) {
+  /* line 64, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+  .shop-by-departments .department-base a {
+    min-width: 100%;
+  }
+  /* line 67, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_shop_by_departments.scss */
+  .shop-by-departments .department-base .department-item-base {
+    min-width: 90%;
+    margin-bottom: 60px;
+  }
+}
+
+/* line 2, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba {
+  margin-top: 30px;
+}
+
+/* line 5, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba h2 {
+  border-bottom: 1px solid #374794;
+  font-size: 20px;
+}
+
+/* line 11, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0px;
+}
+
+/* line 19, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery,
+.why-goreba-base .money-back,
+.why-goreba-base .customer-support,
+.why-goreba-base .online-payment {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* line 31, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery .fast-delivery-icon,
+.why-goreba-base .fast-delivery .money-back-icon,
+.why-goreba-base .fast-delivery .customer-support-icon,
+.why-goreba-base .fast-delivery .online-payment-icon,
+.why-goreba-base .money-back .fast-delivery-icon,
+.why-goreba-base .money-back .money-back-icon,
+.why-goreba-base .money-back .customer-support-icon,
+.why-goreba-base .money-back .online-payment-icon,
+.why-goreba-base .customer-support .fast-delivery-icon,
+.why-goreba-base .customer-support .money-back-icon,
+.why-goreba-base .customer-support .customer-support-icon,
+.why-goreba-base .customer-support .online-payment-icon,
+.why-goreba-base .online-payment .fast-delivery-icon,
+.why-goreba-base .online-payment .money-back-icon,
+.why-goreba-base .online-payment .customer-support-icon,
+.why-goreba-base .online-payment .online-payment-icon {
+  flex-grow: 1;
+  height: 46px;
+  min-width: 46px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+}
+
+/* line 44, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery .fast-delivery-icon,
+.why-goreba-base .money-back .fast-delivery-icon,
+.why-goreba-base .customer-support .fast-delivery-icon,
+.why-goreba-base .online-payment .fast-delivery-icon {
+  background-image: url("/static/img/fast-delivery.png");
+}
+
+/* line 45, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery .money-back-icon,
+.why-goreba-base .money-back .money-back-icon,
+.why-goreba-base .customer-support .money-back-icon,
+.why-goreba-base .online-payment .money-back-icon {
+  background-image: url("/static/img/save-money.png");
+}
+
+/* line 46, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery .customer-support-icon,
+.why-goreba-base .money-back .customer-support-icon,
+.why-goreba-base .customer-support .customer-support-icon,
+.why-goreba-base .online-payment .customer-support-icon {
+  background-image: url("/static/img/customer-service.png");
+}
+
+/* line 47, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery .online-payment-icon,
+.why-goreba-base .money-back .online-payment-icon,
+.why-goreba-base .customer-support .online-payment-icon,
+.why-goreba-base .online-payment .online-payment-icon {
+  background-image: url("/static/img/credit-card.png");
+}
+
+/* line 50, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery .fast-delivery-text,
+.why-goreba-base .fast-delivery .money-back-text,
+.why-goreba-base .fast-delivery .customer-support-text,
+.why-goreba-base .fast-delivery .online-payment-text,
+.why-goreba-base .money-back .fast-delivery-text,
+.why-goreba-base .money-back .money-back-text,
+.why-goreba-base .money-back .customer-support-text,
+.why-goreba-base .money-back .online-payment-text,
+.why-goreba-base .customer-support .fast-delivery-text,
+.why-goreba-base .customer-support .money-back-text,
+.why-goreba-base .customer-support .customer-support-text,
+.why-goreba-base .customer-support .online-payment-text,
+.why-goreba-base .online-payment .fast-delivery-text,
+.why-goreba-base .online-payment .money-back-text,
+.why-goreba-base .online-payment .customer-support-text,
+.why-goreba-base .online-payment .online-payment-text {
+  flex-grow: 4;
+  padding-left: 10px;
+  line-height: 100%;
+}
+
+/* line 58, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery .fast-delivery-text h5,
+.why-goreba-base .fast-delivery .money-back-text h5,
+.why-goreba-base .fast-delivery .customer-support-text h5,
+.why-goreba-base .fast-delivery .online-payment-text h5,
+.why-goreba-base .money-back .fast-delivery-text h5,
+.why-goreba-base .money-back .money-back-text h5,
+.why-goreba-base .money-back .customer-support-text h5,
+.why-goreba-base .money-back .online-payment-text h5,
+.why-goreba-base .customer-support .fast-delivery-text h5,
+.why-goreba-base .customer-support .money-back-text h5,
+.why-goreba-base .customer-support .customer-support-text h5,
+.why-goreba-base .customer-support .online-payment-text h5,
+.why-goreba-base .online-payment .fast-delivery-text h5,
+.why-goreba-base .online-payment .money-back-text h5,
+.why-goreba-base .online-payment .customer-support-text h5,
+.why-goreba-base .online-payment .online-payment-text h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* line 62, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/components/_why_goreba.scss */
+.why-goreba-base .fast-delivery .fast-delivery-text p,
+.why-goreba-base .fast-delivery .money-back-text p,
+.why-goreba-base .fast-delivery .customer-support-text p,
+.why-goreba-base .fast-delivery .online-payment-text p,
+.why-goreba-base .money-back .fast-delivery-text p,
+.why-goreba-base .money-back .money-back-text p,
+.why-goreba-base .money-back .customer-support-text p,
+.why-goreba-base .money-back .online-payment-text p,
+.why-goreba-base .customer-support .fast-delivery-text p,
+.why-goreba-base .customer-support .money-back-text p,
+.why-goreba-base .customer-support .customer-support-text p,
+.why-goreba-base .customer-support .online-payment-text p,
+.why-goreba-base .online-payment .fast-delivery-text p,
+.why-goreba-base .online-payment .money-back-text p,
+.why-goreba-base .online-payment .customer-support-text p,
+.why-goreba-base .online-payment .online-payment-text p {
+  font-size: 14px;
+  margin-top: -5px;
+  margin-bottom: 0px;
+}
+
 /* line 2, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+.goreba-announcement {
+  background: #ff6347;
+  height: 26px;
+  text-align: center;
+  border-radius: 5px 0px;
+  border-bottom: 1px solid #ff6347;
+  box-shadow: #cccccc 0 0 16px;
+}
+
+/* line 10, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+.goreba-announcement p {
+  font-size: 14px;
+}
+
+/* line 18, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base {
   display: flex;
   flex-wrap: wrap;
@@ -93,9 +390,10 @@ a:hover {
   height: 64px;
   align-items: center;
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* line 10, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 27, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-brand-base {
   flex-grow: 7;
   display: flex;
@@ -105,37 +403,30 @@ a:hover {
   margin-right: 15px;
 }
 
-/* line 18, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 35, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-brand-base .navbar-brand-image {
   flex-grow: 3;
-  height: 26px;
-  width: 26px;
-  background: url("/static/img/company.png") no-repeat center;
+  height: 46px;
+  width: 78px;
+  background: url("/static/img/goreba_logo_main.png") no-repeat center;
   background-size: contain;
 }
 
-/* line 25, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
-.des-navbar-base .des-navbar-desktop-base .navbar-brand-base .navbar-brand-name {
-  padding-left: 5px;
-  flex-grow: 7;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-/* line 32, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 43, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-search-penel-base {
   margin: 5px;
   flex-grow: 20;
 }
 
-/* line 36, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 47, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-search-penel-base .navbar-search-area {
   padding-left: 50px;
   margin-right: 30px;
   width: 100%;
+  height: 80%;
 }
 
-/* line 41, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 53, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-search-penel-base .form-inline .form-search-icon {
   display: inline-block;
   position: absolute;
@@ -146,7 +437,7 @@ a:hover {
   background-size: cover;
 }
 
-/* line 51, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 63, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-wishlist-base {
   flex-grow: 3;
   display: block;
@@ -157,7 +448,7 @@ a:hover {
   margin-right: 20px;
 }
 
-/* line 60, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 72, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-account-orders-base {
   flex-grow: 5;
   display: flex;
@@ -167,7 +458,7 @@ a:hover {
   margin-right: 15px;
 }
 
-/* line 68, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 80, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-account-orders-base .navbar-account-user-icon {
   flex-grow: 3;
   height: 26px;
@@ -176,20 +467,20 @@ a:hover {
   background-size: contain;
 }
 
-/* line 75, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 87, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-account-orders-base .navbar-my-account {
   flex-grow: 7;
   padding-left: 5px;
 }
 
-/* line 79, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 91, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-account-orders-base .navbar-my-account span {
   font-size: 12px;
   display: block;
   margin-bottom: -5px;
 }
 
-/* line 86, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 98, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-cart-base {
   flex-grow: 5;
   display: flex;
@@ -198,7 +489,7 @@ a:hover {
   align-items: center;
 }
 
-/* line 93, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 105, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-cart-base .navbar-cart-icon {
   flex-grow: 3;
   height: 26px;
@@ -207,7 +498,7 @@ a:hover {
   background-size: contain;
 }
 
-/* line 100, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 112, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-cart-base .navbar-cart-icon span {
   color: #ffffff;
   background-color: #9d2832;
@@ -217,13 +508,13 @@ a:hover {
   margin-left: 10px;
 }
 
-/* line 109, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 121, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-desktop-base .navbar-cart-base .navbar-cart-info {
   flex-grow: 7;
   padding-left: 5px;
 }
 
-/* line 116, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 128, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base {
   display: flex;
   flex-wrap: wrap;
@@ -233,7 +524,7 @@ a:hover {
   font-size: 16px;
 }
 
-/* line 124, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 136, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base .navbar-brand-base {
   flex-grow: 7;
   display: flex;
@@ -243,7 +534,7 @@ a:hover {
   margin-right: 15px;
 }
 
-/* line 132, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 144, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base .navbar-brand-base .navbar-brand-image {
   flex-grow: 1;
   height: 32px;
@@ -252,7 +543,7 @@ a:hover {
   background-size: contain;
 }
 
-/* line 139, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 151, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base .navbar-brand-base .navbar-brand-name {
   padding-left: 6px;
   flex-grow: 7;
@@ -260,7 +551,7 @@ a:hover {
   font-size: 24px;
 }
 
-/* line 147, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 159, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base .navbar-mobile-menu-icon,
 .des-navbar-base .des-navbar-mobile-base .navbar-account-user-icon,
 .des-navbar-base .des-navbar-mobile-base .navbar-cart-icon {
@@ -269,25 +560,25 @@ a:hover {
   width: 32px;
 }
 
-/* line 154, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 166, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base .navbar-mobile-menu-icon {
   background: url("/static/img/open-menu.png") no-repeat center;
   background-size: contain;
 }
 
-/* line 158, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 170, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base .navbar-account-user-icon {
   background: url("/static/img/user.png") no-repeat center;
   background-size: contain;
 }
 
-/* line 162, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 174, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base .navbar-cart-icon {
   background: url("/static/img/cart.png") no-repeat center;
   background-size: contain;
 }
 
-/* line 166, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 178, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-base .des-navbar-mobile-base .navbar-cart-icon span {
   color: #ffffff;
   background-color: #9d2832;
@@ -298,44 +589,46 @@ a:hover {
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 179, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+  /* line 191, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
   .des-navbar-base .des-navbar-mobile-base {
     display: none !important;
   }
 }
 
 @media only screen and (max-width: 769px) {
-  /* line 184, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+  /* line 196, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
   .des-navbar-base .des-navbar-desktop-base {
     display: none !important;
   }
 }
 
-/* line 190, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 202, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-lower-desktop {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 27px;
+  height: 40px;
   text-align: center;
-  background-color: #374794;
+  background-color: #eeeeee;
+  border-bottom: 2px solid #ff6347;
+  border-top: 1px solid #eeeeee;
+  box-shadow: #cccccc 0 0 16px;
 }
 
-/* line 199, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 214, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-lower-desktop div {
-  color: #ffffff;
   margin: 0px 10px;
 }
 
-/* line 203, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 218, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-lower-desktop div:hover,
 .des-navbar-lower-desktop div.active {
   border-bottom: 3px solid #ff6347;
   font-weight: 600;
 }
 
-/* line 210, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 225, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-lower-mobile {
   display: flex;
   align-items: center;
@@ -344,7 +637,7 @@ a:hover {
   text-align: center;
 }
 
-/* line 217, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 232, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-lower-mobile div {
   border: 1px solid #374794;
   background-color: #ffffff;
@@ -355,13 +648,13 @@ a:hover {
   padding: 2px 5px;
 }
 
-/* line 226, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 241, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-navbar-lower-mobile div:hover,
 .des-navbar-lower-mobile div.active {
   border-bottom: 3px solid #ff6347;
 }
 
-/* line 232, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 247, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .des-mobile-item-seperator {
   height: 14px;
   border-bottom: 1px solid #374794;
@@ -373,19 +666,19 @@ a:hover {
   margin-bottom: 10px;
 }
 
-/* line 242, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 257, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .navbar-mobile-detail-menu {
   display: none;
 }
 
-/* line 245, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 260, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .navbar-mobile-detail-menu .navbar-search-area {
   padding-left: 50px;
   margin-right: 30px;
   width: 100%;
 }
 
-/* line 250, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 265, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .navbar-mobile-detail-menu .form-inline .form-search-icon {
   display: inline-block;
   position: absolute;
@@ -396,7 +689,7 @@ a:hover {
   background-size: cover;
 }
 
-/* line 259, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 274, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .navbar-mobile-detail-menu div.mobile-menu-item {
   height: 32px;
   line-height: 32px;
@@ -410,12 +703,12 @@ a:hover {
   box-shadow: #cccccc 0 0 16px;
 }
 
-/* line 273, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 288, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .navbar-mobile-account-menu-base {
   display: none;
 }
 
-/* line 276, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 291, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .navbar-mobile-account-menu-base .navbar-mobile-account-menu {
   display: flex;
   flex-wrap: wrap;
@@ -426,7 +719,7 @@ a:hover {
   margin-bottom: 10px;
 }
 
-/* line 285, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 300, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .navbar-mobile-account-menu-base .navbar-mobile-account-menu .mobile-account-primary-button,
 .navbar-mobile-account-menu-base .navbar-mobile-account-menu .mobile-account-secondary-button {
   flex-grow: 1;
@@ -439,21 +732,21 @@ a:hover {
   text-transform: uppercase;
 }
 
-/* line 296, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+/* line 311, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
 .navbar-mobile-account-menu-base .navbar-mobile-account-menu .mobile-account-primary-button {
   background-color: #374794;
   color: #ffffff;
 }
 
 @media only screen and (max-width: 769px) {
-  /* line 305, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+  /* line 320, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
   .des-navbar-lower-desktop {
     display: none !important;
   }
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 310, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
+  /* line 325, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_header.scss */
   .navbar-mobile-detail-menu,
   .navbar-mobile-account-menu,
   .des-navbar-lower-mobile {
@@ -692,7 +985,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 /* line 7, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
@@ -703,11 +996,12 @@ a:hover {
   box-shadow: #cccccc 0 0 16px;
   height: 330px;
   width: 250px;
-  margin: 5px;
+  margin: 20px 5px;
   flex-grow: 1;
+  max-width: 280px;
 }
 
-/* line 18, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 19, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-item-image {
   height: 220px;
   width: 100%;
@@ -716,7 +1010,7 @@ a:hover {
   background-size: cover;
 }
 
-/* line 26, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 27, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-item-image .product-item-add-fav {
   display: flex;
   flex-wrap: wrap;
@@ -732,7 +1026,7 @@ a:hover {
   background-color: #ffffff;
 }
 
-/* line 41, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 42, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-item-image .product-item-add-fav div {
   height: 20px;
   width: 20px;
@@ -743,7 +1037,7 @@ a:hover {
   background-size: contain;
 }
 
-/* line 52, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 53, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-item-name {
   height: 30px;
   width: 100%;
@@ -752,46 +1046,46 @@ a:hover {
   padding-left: 5px;
 }
 
-/* line 59, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 60, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-category-name-tag {
   height: 20px;
   width: 100%;
   display: flex;
 }
 
-/* line 64, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 65, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-category-name-tag .product-category-name {
   font-size: 14px;
   margin-right: 5px;
   padding-left: 5px;
 }
 
-/* line 71, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 72, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-category-name-tag .des-badge-clearance,
 .product-list-display-base .product-item-display-base .product-category-name-tag .des-badge-bestseller,
 .product-list-display-base .product-item-display-base .product-category-name-tag .des-badge-new {
   font-size: 12px;
 }
 
-/* line 77, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 78, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-category-name-tag .des-badge-new {
   background-color: #9d2832;
   color: #ffffff;
 }
 
-/* line 81, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 82, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-category-name-tag .des-badge-bestseller {
   background-color: #374794;
   color: #ffffff;
 }
 
-/* line 85, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 86, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .product-category-name-tag .des-badge-clearance {
   background-color: yellow;
   color: #374794;
 }
 
-/* line 90, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 91, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .item-add-to-cart-price {
   width: 100%;
   height: 50px;
@@ -803,7 +1097,7 @@ a:hover {
   margin-top: 10px;
 }
 
-/* line 100, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 101, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .item-add-to-cart-price .item-add-to-cart {
   min-width: 100px;
   padding: 7px;
@@ -814,7 +1108,7 @@ a:hover {
   color: #ffffff;
 }
 
-/* line 109, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 110, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .item-add-to-cart-price .item-already-in-cart {
   padding: 7px;
   margin-left: 5px;
@@ -825,7 +1119,7 @@ a:hover {
   color: #374794;
 }
 
-/* line 118, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 119, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .item-add-to-cart-price .remove-item-from-cart {
   padding: 7px;
   margin-left: 5px;
@@ -836,14 +1130,14 @@ a:hover {
   color: #ffffff;
 }
 
-/* line 127, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 128, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .item-add-to-cart-price .item-actual-price {
   flex-grow: 1;
   color: #9d2832;
   font-size: 12px;
 }
 
-/* line 132, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 133, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .item-add-to-cart-price .item-actual-price span {
   font-size: 16px;
   display: block;
@@ -851,18 +1145,18 @@ a:hover {
   text-decoration: line-through;
 }
 
-/* line 139, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 140, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .product-list-display-base .product-item-display-base .item-add-to-cart-price .item-discounted-price {
   flex-grow: 1;
   font-size: 18px;
 }
 
-/* line 148, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 149, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .des-pagination {
   margin-top: 30px;
 }
 
-/* line 152, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 153, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .pagination > li > a {
   background-color: #ffffff !important;
   color: #374794 !important;
@@ -871,7 +1165,7 @@ a:hover {
   border-radius: 5px;
 }
 
-/* line 160, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 161, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .pagination > li > a:focus,
 .pagination > li > a:hover,
 .pagination > li > span:focus,
@@ -880,13 +1174,13 @@ a:hover {
   background-color: #ff6347 !important;
 }
 
-/* line 168, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 169, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .pagination > .active > a {
   color: #ffffff !important;
   background-color: #374794 !important;
 }
 
-/* line 173, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
+/* line 174, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/layout/_list-items.scss */
 .pagination > .active > a:hover {
   background-color: #ff6347 !important;
 }
@@ -1472,14 +1766,13 @@ h2.product-title {
   font-size: 20px;
   background-color: #eeeeee;
   border: 0;
-  border-radius: 5px 0 5px 0;
+  border-radius: 5px 0;
   line-height: 60px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* line 65, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
+/* line 55, ../../../../../Users/hemrajregmi/PycharmProjects/desSyabil/static_files/scss/pages/_static_pages.scss */
 .company_address {
   height: 70px;
   width: 140px;

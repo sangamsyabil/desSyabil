@@ -2,6 +2,11 @@
 @import 'base/_variables.scss';
 @import 'base/_parameters.scss';
 
+// Import components
+@import 'components/_components_base.scss';
+@import 'components/_shop_by_departments.scss';
+@import 'components/_why_goreba.scss';
+
 // Import layouts
 @import 'layout/_header.scss';
 @import 'layout/_footer.scss';

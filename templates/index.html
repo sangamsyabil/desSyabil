@@ -1,15 +1,33 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block main %}
-{% include 'momentModules/index_sliders.html' %}
 
+    {#    Index page main sliders #}
+    {% include 'momentModules/index_sliders.html' %}
 
-<div class="container">
-    <div class="home-featured">
-        <h2>Featured Products</h2>
-        {% include 'momentModules/list-items.html' %}
+    {#    Featured products display #}
+    <div class="container">
+        <div class="home-featured">
+            <h2>Featured Products</h2>
+            {% include 'momentModules/featured-list-items.html' %}
+        </div>
     </div>
-</div>
+
+    {#    Shop by departments display #}
+    <div class="container">
+        <div class="home-shop-by-department">
+            <h2>Shop by Departments</h2>
+            {% include 'momentModules/shop-by-departments.html' %}
+        </div>
+    </div>
+
+    {#    Our Services #}
+    <div class="container">
+        <div class="why-goreba">
+            <h2>Why Shoping with Goreba Store?</h2>
+            {% include 'momentModules/why-goreba.html' %}
+        </div>
+    </div>
 
 
 {% block extra_scripts %}

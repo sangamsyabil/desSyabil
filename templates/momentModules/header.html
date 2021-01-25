@@ -13,11 +13,17 @@
 {% url '' as new_releases_url %}
 {% url '' as on_sale_url %}
 {% url '' as most_populars_url %}
-{% url '' as pashmina_url %}
-{% url '' as handicrafts_url %}
-{% url '' as sisha_url %}
+{% url '' as scarfs_url %}
+{% url '' as leathers_url %}
+{% url '' as phone_cases_url %}
 {% url '' as jewelleries_url %}
 {% url '' as gift_ideas_url %}
+{% url '' as shipping_url %}
+
+
+<div class="goreba-announcement">
+    <p>International Shipping Available! Checkout our <a href={{ shipping_url }}>shipping policy</a></p>
+</div>
 
 <div class="container">
     <div class="des-navbar-base">
@@ -25,7 +31,6 @@
             <!-- brand -->
             <a href={{ home_url }}><div class="navbar-brand-base">
                 <div class="navbar-brand-image"></div>
-                <div class="navbar-brand-name">DesMoments</div>
             </div></a>
 
             <!-- Search panel -->
@@ -94,10 +99,10 @@
 
         <span class="des-mobile-item-seperator">Shop Categories</span>
 
-        <a href=""><div class="mobile-menu-item">Pashmina <span></span></div></a>
-        <a href=""><div class="mobile-menu-item">Precious Stones <span></span></div></a>
-        <a href=""><div class="mobile-menu-item">Jewelleries <span></span></div></a>
-        <a href=""><div class="mobile-menu-item">Garments <span></span></div></a>
+        <a href=""><div class="mobile-menu-item">Pashmina / Cashmere Scarfs <span></span></div></a>
+        <a href=""><div class="mobile-menu-item">Leather Goods<span></span></div></a>
+        <a href=""><div class="mobile-menu-item">Jewelleries<span></span></div></a>
+        <a href=""><div class="mobile-menu-item">Phone Cases <span></span></div></a>
 
         <span class="des-mobile-item-seperator">Shop</span>
     </div>
@@ -119,13 +124,13 @@
 </div>
 
 <div class="des-navbar-lower-desktop">
-    <a href={{ best_sellers_url }}><div class="{% if request.path == best_sellers_url %}active{% endif %}">Best Sellers</div> </a>
+    <a href={{ best_sellers_url }}><div class="{% if request.path == best_sellers_url %}active{% endif %}">Bestsellers</div> </a>
     <a href={{ new_releases_url }}><div class="{% if request.path == new_releases_url %}active{% endif %}">New Releases</div> </a>
     <a href={{ on_sale_url }}><div class="{% if request.path == on_sale_url %}active{% endif %}">On SALE</div></a>
     <a href={{ most_populars_url }}><div class="{% if request.path == most_populars_url %}active{% endif %}">Most Populars</div></a>
-    <a href={{ pashmina_url }}><div class="{% if request.path == pashmina_url %}active{% endif %}">Pashmina</div></a>
-    <a href={{ handicrafts_url }}><div class="{% if request.path == handicrafts_url %}active{% endif %}">Handicrafts</div></a>
-    <a href={{ sisha_url }}><div class="{% if request.path == sisha_url %}active{% endif %}">Sisha</div></a>
+    <a href={{ scarfs_url }}><div class="{% if request.path == scarfs_url %}active{% endif %}">Pashmina / Cashmere Scarfs</div></a>
+    <a href={{ leathers_url }}><div class="{% if request.path == leathers_url %}active{% endif %}">Leather Goods</div></a>
+    <a href={{ phone_cases_url }}><div class="{% if request.path == phone_cases_url %}active{% endif %}">Phone Cases</div></a>
     <a href={{ jewelleries_url }}><div class="{% if request.path == jewelleries_url %}active{% endif %}">Jewelleries</div></a>
     <a href={{ gift_ideas_url }}><div class="{% if request.path == gift_ideas_url %}active{% endif %}">Gift Ideas</div></a>
 </div>

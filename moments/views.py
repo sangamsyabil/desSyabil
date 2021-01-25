@@ -10,7 +10,7 @@ from .forms import ContactUsForm
 
 
 class IndexView(ListView):
-    paginate_by = 4
+    paginate_by = 8
     template_name = "index.html"
 
     def get_context_data(self, *args, **kwargs):
@@ -21,7 +21,7 @@ class IndexView(ListView):
 
     def get_queryset(self, *args, **kwargs):
         request = self.request
-        return Product.objects.all().order_by('?')
+        return Product.objects.featured().order_by('?')
 
 
 class ContactUsView(View):

@@ -19,14 +19,11 @@
 {% url 'moments:faq' as faq_url %}
 
 {# shop by departments urls #}
-{% url 'moments:home' as pashmina_url %}
-{% url 'moments:home' as handicrafts_url %}
-{% url 'moments:home' as sisha_url %}
+{% url 'moments:home' as scarfs_url %}
+{% url 'moments:home' as leathers_url %}
 {% url 'moments:home' as jewelleries_url %}
 {% url 'moments:home' as gift_ideas_url %}
-{% url 'moments:home' as garments_url %}
-{% url 'moments:home' as bags_wallet_url %}
-{% url 'moments:home' as accessories_url %}
+{% url 'moments:home' as phone_cases_url %}
 
 <footer class="upper-footer-base">
     <div class="container">
@@ -34,14 +31,11 @@
             <div class="footer-departments">
                 <span>Shop Departmants</span>
                 <ul>
-                    <a href={{ sisha_url }}><li>Sisha</li></a>
-                    <a href={{ pashmina_url }}><li>Pashmina</li></a>
-                    <a href={{ handicrafts_url }}><li>Handicrafts</li></a>
-                    <a href={{ gift_ideas_url }}><li>Gift Ideas</li></a>
+                    <a href={{ scarfs_url }}><li>Pashmina / Cashmere Scarfs</li></a>
+                    <a href={{ leathers_url }}><li>Leather Goods</li></a>
+                    <a href={{ phone_cases_url }}><li>Phone Cases</li></a>
                     <a href={{ jewelleries_url }}><li>Jewelleries</li></a>
-                    <a href={{ garments_url }}><li>Garments</li></a>
-                    <a href={{ bags_wallet_url }}><li>Bags & Wallets</li></a>
-                    <a href={{ accessories_url }}><li>Accessories</li></a>
+                    <a href={{ gift_ideas_url }}><li>Gift Ideas</li></a>
                 </ul>
             </div>
             <div class="footer-about-us">
@@ -76,35 +70,11 @@
 </footer>
 <footer class="lower-footer-base">
     <div class="container">
-        <div class="lower-footer-container">
-            <div class="fast-delivery">
-                <div id="faster-deliver-icon"></div>
-                <span>Fast and Free Devivery</span>
-                <p>Free delivery for over $100</p>
-            </div>
-            <div class="money-back">
-                <div id="money-back-icon"></div>
-                <span>Money Back Guarantee</span>
-                <p>We return money within 30 days</p>
-            </div>
-            <div class="customer-support">
-                <div id="customer-support-icon"></div>
-                <span>Excellent Customer Support</span>
-                <p>Friendly and excellent support</p>
-            </div>
-            <div class="online-payment">
-                <div id="online-payment-icon"></div>
-                <span>Secure Online Payment</span>
-                <p>We process SSL / Secure Certificate</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
         <div class="lowest-footer">
             <a href={{ terms_url }}><span>Terms of Use</span></a>
             <a href={{ privacy_policy_url }}><span>Privacy Policy</span></a>
             <a href={{ cookie_policy_url }}><span>Cookie Policy</span></a>
-            <p>© 2020 desSyabil - All Rights Reserved</p>
+            <p>© 2021 Goreba - All Rights Reserved</p>
         </div>
     </div>
 </footer>

@@ -1,0 +1,46 @@
+{% load static %}
+
+<!-- Some url used -->
+{% url '' as gift_ideas_url %}
+{% url '' as jewelry_url %}
+{% url '' as leather_googs_url %}
+{% url '' as pashmina_url %}
+{% url '' as phone_case_url%}
+
+<div class="container">
+    <div class="shop-by-departments">
+        <div class="department-base">
+            <a href={{ gift_ideas_url }}>
+                <div class="department-item-base">
+                    <div class="department-one-image"></div>
+                    <span>Gift Ideas</span>
+                </div>
+            </a>
+            <a href={{ leather_googs_url }}>
+                <div class="department-item-base">
+                    <div class="department-two-image"></div>
+                    <span>Leather Goods</span>
+                </div>
+            </a>
+            <a href={{ jewelry_url }}>
+                <div class="department-item-base">
+                    <div class="department-three-image"></div>
+                    <span>Jewelry</span>
+                </div>
+            </a>
+            <a href={{ pashmina_url }}>
+                <div class="department-item-base">
+                    <div class="department-four-image"></div>
+                    <span>Pashmina/Cashmere</span>
+                </div>
+            </a>
+            <a href={{ phone_case_url }}>
+                <div class="department-item-base">
+                    <div class="department-five-image"></div>
+                    <span>Phone Cases</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
