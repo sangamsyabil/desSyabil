@@ -17,4 +17,3 @@ class ContactUsForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea(attrs={
         'rows': 4
     }))
-

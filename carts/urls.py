@@ -2,11 +2,11 @@ from django.conf.urls import url
 from django.urls import path
 
 from .views import (
-        cart_home, 
-        cart_update, 
-        checkout_home,
-        checkout_done_view
-        )
+    cart_home,
+    cart_update,
+    checkout_home,
+    checkout_done_view
+)
 
 app_name = 'cart'
 

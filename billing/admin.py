@@ -12,4 +12,3 @@ class BillingProfileAdmin(admin.ModelAdmin):
 admin.site.register(BillingProfile, BillingProfileAdmin)
 admin.site.register(Card)
 admin.site.register(Charge)
-

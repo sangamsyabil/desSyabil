@@ -23,4 +23,3 @@ def tag_pre_save_receiver(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(tag_pre_save_receiver, sender=Tag)
-
